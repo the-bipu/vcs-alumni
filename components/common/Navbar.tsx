@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <div>
+        <div className='flex flex-col w-full h-auto shadow'>
             <div className='w-full h-auto py-4 flex items-center justify-center bg-[#fff] text-[#1a1a1a]'>
                 <div className='md:w-10/12 w-11/12 h-auto flex flex-row gap-10 justify-start items-center relative'>
 
@@ -83,15 +83,15 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <div className='w-full h-auto flex flex-col items-center justify-center bg-white text-[#1a1a1a] border-t border-t-[#acacac]'>
+            <div className='w-full h-auto flex flex-col items-center justify-center bg-white text-[#1a1a1a] border-t border-t-[#acacac] shadow'>
                 <div className='lg:flex hidden flex-row w-10/12 gap-12 py-3 text-base font-normal uppercase transition-all'>
                     <span className={`cursor-pointer`} onClick={() => router.push('/')}>Home</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/services')}>About Us</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/company')}>Our Alumni</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Gallery</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Career Guidance</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/about')}>About Us</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/alumni')}>Our Alumni</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/gallery')}>Gallery</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/guidance')}>Career Guidance</span>
                     <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Contact Us</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>VCS Homepage</span>
+                    <span className={`cursor-pointer`} onClick={() => router.push('/')}>VCS Homepage</span>
                 </div>
             </div>
 
