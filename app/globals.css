@@ -60,3 +60,13 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* widths */
+.w-105 { width: 450px; }
+.w-115 { width: 550px; }
+.w-125 { width: 650px; }
+
+/* heights */
+.h-105 { height: 450px; }
+.h-115 { height: 550px; }
+.h-125 { height: 650px; }
