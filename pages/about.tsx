@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { UserContext } from '@/context/userContext';
+import JoinUs from '@/components/common/JoinUs';
 
 export default function About() {
+    const { setActiveTab } = useContext(UserContext);
+    useEffect(() => {
+        setActiveTab('about');
+    }, [setActiveTab]);
+
     return (
         <div className='min-h-screen bg-white'>
 
@@ -100,6 +107,8 @@ export default function About() {
                             Let’s work hand in hand to inspire, educate, and empower the next generation to achieve greatness!
                         </div>
                     </div>
+
+                    <JoinUs />
 
                 </div>
 

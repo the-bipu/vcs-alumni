@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import JoinUs from '@/components/common/JoinUs';
+import { UserContext } from '@/context/userContext';
 
 export default function Home() {
+    const { setActiveTab } = useContext(UserContext);
+    useEffect(() => {
+      setActiveTab('home');
+    }, [setActiveTab]);
+    
+
     return (
         <div className='min-h-screen bg-white'>
 
@@ -91,11 +98,13 @@ export default function Home() {
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
                             <div className='w-full h-auto flex flex-row items-center justify-between'>
                                 <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
-                                >
-                                    Explore More
-                                </button>
+                                <Link href={'/gallery'}>
+                                    <button
+                                        className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
+                                    >
+                                        Explore Activities
+                                    </button>
+                                </Link>
                             </div>
                             <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover' />
@@ -112,11 +121,13 @@ export default function Home() {
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
                             <div className='w-full h-auto flex flex-row items-center justify-between'>
                                 <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Gallery</h2>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
-                                >
-                                    Explore More
-                                </button>
+                                <Link href={'/gallery'}>
+                                    <button
+                                        className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
+                                    >
+                                        Explore Gallery
+                                    </button>
+                                </Link>
                             </div>
                             <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover' />
