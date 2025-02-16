@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import JoinUs from '@/components/common/JoinUs';
+import { UserContext } from '@/context/userContext';
 
-export default function About() {
+export default function Contact() {
     const { register, handleSubmit } = useForm();
+    const { setActiveTab } = useContext(UserContext);
+    useEffect(() => {
+        setActiveTab('contact');
+    }, [setActiveTab]);
 
     const onSubmit = async (data: any) => {
         console.log(data);
@@ -35,9 +41,9 @@ export default function About() {
 
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
-                <div className='w-full h-auto flex flex-col items-center justify-center border-b border-b-[#acacac]'>
+                <div className='w-full h-auto flex flex-col items-center justify-center'>
 
-                    <div className='flex flex-col w-full h-auto items-center justify-center py-20'>
+                    <div className='flex flex-col w-full h-auto items-center justify-center py-20 border-b border-b-[#acacac]'>
 
                         <div className='flex flex-col w-full h-auto justify-center items-center text-center'>
                             <div className=' md:text-5xl text-3xl leading-normal text-[#1a1a1a] font-bold'>Let's Connect</div>
@@ -86,6 +92,8 @@ export default function About() {
 
                         </div>
                     </div>
+
+                    <JoinUs />
 
                 </div>
 

@@ -4,17 +4,24 @@ import '../app/globals.css'
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 
+import { UserProvider } from '@/context/userContext'
+import { SessionProvider } from 'next-auth/react';
+
 export const metadata: Metadata = {
-    title: "Vaishali Central School | 2025",
+    title: "Alumni | Vaishali Central School | 2025",
     description: "",
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
-            <Navbar />
-            <Component {...pageProps} />
-            <Footer />
+            <SessionProvider session={pageProps.session}>
+                <UserProvider>
+                    <Navbar />
+                    <Component {...pageProps} />
+                    <Footer />
+                </UserProvider>
+            </SessionProvider>
         </>
     )
 }
