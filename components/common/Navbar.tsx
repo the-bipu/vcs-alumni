@@ -1,97 +1,153 @@
 'use client';
 
+import { UserContext } from '@/context/userContext';
+import { signOut } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 const Navbar = () => {
     const router = useRouter();
+    const { activeTab, authenticated, userData } = useContext(UserContext);
+    console.log(authenticated)
+    console.log(userData)
 
     const [isActive, setIsActive] = useState(false);
     const toggleNavbar = () => {
         setIsActive(!isActive);
     };
 
+    useEffect(() => {
+        if (isActive) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isActive]);
+
     return (
         <div className='flex flex-col w-full h-auto shadow'>
             <div className='w-full h-auto py-4 flex items-center justify-center bg-[#fff] text-[#1a1a1a]'>
-                <div className='md:w-10/12 w-11/12 h-auto flex flex-row gap-10 justify-start items-center relative'>
 
-                    <Link href='/' className='cursor-pointer'>
-                        <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-20' />
-                    </Link>
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center relative'>
 
-                    <div>
-                        <div className='font-bold text-3xl'>Alumni - Vaishali Central School</div>
-                        <div className='font-normal'>(Affiliated to CBSE, New Delhi)</div>
-                        <div className='font-medium'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                    <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center'>
+                        <Link href='/' className='cursor-pointer'>
+                            <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-20' />
+                        </Link>
+
+                        <div>
+                            <div className='font-bold text-3xl'>Alumni - Vaishali Central School</div>
+                            <div className='font-normal'>(Affiliated to CBSE, New Delhi)</div>
+                            <div className='font-medium'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                        </div>
                     </div>
 
-                    <div className='lg:hidden flex py-1'>
+                    <div className='flex w-10 h-10 rounded items-center justify-center cursor-pointer shadow'>
                         <Image src='/navbar/dash.svg' alt='dash logo' width={30} height={30} onClick={toggleNavbar} />
                     </div>
 
                 </div>
 
-                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-[100vh] bg-white text-[#1a1a1a] transition-all flex-col items-center gap-4`}>
+                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-white text-[#1a1a1a] transition-all flex-col items-center`}>
 
-                    <div className='md:w-10/12 w-11/12 h-auto flex flex-row justify-between py-6 items-center gap-5 text-base shadow'>
-                        <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={300} height={80} className='md:w-80 w-40' />
+                    <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center relative py-4'>
+                        <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center'>
+                            <Link href='/' className='cursor-pointer'>
+                                <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-24' />
+                            </Link>
 
-                        <div className={`cursor-pointer ${isActive ? 'block' : ''}`} onClick={toggleNavbar}>
+                            <div className='md:text-left text-center'>
+                                <div className='font-bold text-3xl'>Alumni - Vaishali Central School</div>
+                                <div className='font-normal md:text-base text-sm'>(Affiliated to CBSE, New Delhi)</div>
+                                <div className='font-medium md:text-base text-sm'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                            </div>
+                        </div>
+
+                        <div className={`flex w-10 h-10 rounded items-center justify-center cursor-pointer shadow ${isActive ? 'block' : ''}`} onClick={toggleNavbar}>
                             <Image src='/navbar/cross.svg' alt='dash logo' width={30} height={30} />
                         </div>
                     </div>
 
-                    <div className='flex flex-col gap-6 items-start w-11/12'>
-                        <div
-                            className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                            onClick={() => { router.push('/'); setIsActive(!isActive) }}
-                        >
-                            Home
-                        </div>
-
-                        <div
-                            className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                            onClick={() => { router.push('/services'); setIsActive(!isActive) }}
-                        >
-                            Services
-                        </div>
-
-                        <div
-                            className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                            onClick={() => { router.push('/company'); setIsActive(!isActive) }}
-                        >
-                            Company
-                        </div>
-
-                        <div
-                            className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointer`}
-                            onClick={() => { router.push('/our-team'); setIsActive(!isActive) }}
-                        >
-                            Our Team
-                        </div>
-
-                        <div
-                            className={`h-8 w-30 px-3 font-medium text-xl text-left cursor-pointerm'}`}
-                            onClick={() => { router.push('/contact'); setIsActive(!isActive) }}
-                        >
-                            Contact Us
-                        </div>
+                    <div className='flex md:flex-row flex-col w-10/12 md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
+                        <Link href='/' onClick={toggleNavbar}>
+                            <div className={activeTab === 'home' ? 'text-blue-700' : ''}>Home</div>
+                        </Link>
+                        <Link href='/about' onClick={toggleNavbar}>
+                            <div className={activeTab === 'about' ? 'text-blue-700' : ''}>About Us</div>
+                        </Link>
+                        <Link href='/alumni' onClick={toggleNavbar}>
+                            <div className={activeTab === 'alumni' ? 'text-blue-700' : ''}>Our Alumni</div>
+                        </Link>
+                        <Link href='/gallery' onClick={toggleNavbar}>
+                            <div className={activeTab === 'gallery' ? 'text-blue-700' : ''}>Gallery</div>
+                        </Link>
+                        <Link href='/guidance' onClick={toggleNavbar}>
+                            <div className={activeTab === 'guidance' ? 'text-blue-700' : ''}>Career Guidance</div>
+                        </Link>
+                        <Link href='/contact' onClick={toggleNavbar}>
+                            <div className={activeTab === 'contact' ? 'text-blue-700' : ''}>Contact Us</div>
+                        </Link>
+                        {authenticated ? (
+                            <Link href='/account' onClick={toggleNavbar}>
+                                <div className={activeTab === 'account' ? 'text-blue-700' : ''}>Account</div>
+                            </Link>
+                        ) : (
+                            <Link href='/auth/login' onClick={toggleNavbar}>
+                                <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
+                            </Link>
+                        )}
+                        <Link href='/' target='_blank'>
+                            <div className={activeTab === 'vcs' ? 'text-blue-700' : ''}>VCS Homepage</div>
+                        </Link>
+                        {authenticated && (
+                            <div className='cursor-pointer' onClick={() => {signOut(); toggleNavbar}}>Sign Out</div>
+                        )}
                     </div>
-
                 </div>
+
             </div>
-            <div className='w-full h-auto flex flex-col items-center justify-center bg-white text-[#1a1a1a] border-t border-t-[#acacac] shadow'>
+
+            <div className='w-full h-auto flex flex-col items-center justify-center bg-white text-[#1a1a1a] shadow border-t border-t-[#acacac]'>
                 <div className='lg:flex hidden flex-row w-10/12 gap-12 py-3 text-base font-normal uppercase transition-all'>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/')}>Home</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/about')}>About Us</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/alumni')}>Our Alumni</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/gallery')}>Gallery</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/guidance')}>Career Guidance</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/contact')}>Contact Us</span>
-                    <span className={`cursor-pointer`} onClick={() => router.push('/')}>VCS Homepage</span>
+                    <Link href='/'>
+                        <div className={activeTab === 'home' ? 'text-blue-700' : ''}>Home</div>
+                    </Link>
+                    <Link href='/about'>
+                        <div className={activeTab === 'about' ? 'text-blue-700' : ''}>About Us</div>
+                    </Link>
+                    <Link href='/alumni'>
+                        <div className={activeTab === 'alumni' ? 'text-blue-700' : ''}>Our Alumni</div>
+                    </Link>
+                    <Link href='/gallery'>
+                        <div className={activeTab === 'gallery' ? 'text-blue-700' : ''}>Gallery</div>
+                    </Link>
+                    <Link href='/guidance'>
+                        <div className={activeTab === 'guidance' ? 'text-blue-700' : ''}>Career Guidance</div>
+                    </Link>
+                    <Link href='/contact'>
+                        <div className={activeTab === 'contact' ? 'text-blue-700' : ''}>Contact Us</div>
+                    </Link>
+                    {authenticated ? (
+                        <Link href='/account'>
+                            <div className={activeTab === 'account' ? 'text-blue-700' : ''}>Account</div>
+                        </Link>
+                    ) : (
+                        <Link href='/auth/login'>
+                            <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
+                        </Link>
+                    )}
+                    <Link href='/' target='_blank'>
+                        <div className={activeTab === 'vcs' ? 'text-blue-700' : ''}>VCS Homepage</div>
+                    </Link>
+                    {authenticated && (
+                        <div className='cursor-pointer' onClick={() => signOut()}>Sign Out</div>
+                    )}
                 </div>
             </div>
 
