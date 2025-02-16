@@ -8,10 +8,7 @@ import { useRouter } from 'next/navigation'
 import React, { useContext, useEffect, useState } from 'react'
 
 const Navbar = () => {
-    const router = useRouter();
     const { activeTab, authenticated, userData } = useContext(UserContext);
-    console.log(authenticated)
-    console.log(userData)
 
     const [isActive, setIsActive] = useState(false);
     const toggleNavbar = () => {
@@ -38,13 +35,20 @@ const Navbar = () => {
 
                     <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center'>
                         <Link href='/' className='cursor-pointer'>
-                            <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-20' />
+                            <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-24' />
                         </Link>
 
-                        <div>
+                        <div className='md:flex hidden flex-col text-left'>
                             <div className='font-bold text-3xl'>Alumni - Vaishali Central School</div>
                             <div className='font-normal'>(Affiliated to CBSE, New Delhi)</div>
                             <div className='font-medium'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                        </div>
+
+                        <div className='md:hidden flex flex-col text-center'>
+                            <div className='font-bold text-2xl'>Alumni</div>
+                            <div className='font-bold text-2xl'>Vaishali Central School</div>
+                            <div className='font-normal text-sm'>(Affiliated to CBSE, New Delhi)</div>
+                            <div className='font-medium text-sm'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
                         </div>
                     </div>
 
@@ -62,10 +66,17 @@ const Navbar = () => {
                                 <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-24' />
                             </Link>
 
-                            <div className='md:text-left text-center'>
+                            <div className='md:flex hidden flex-col text-left'>
                                 <div className='font-bold text-3xl'>Alumni - Vaishali Central School</div>
-                                <div className='font-normal md:text-base text-sm'>(Affiliated to CBSE, New Delhi)</div>
-                                <div className='font-medium md:text-base text-sm'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                                <div className='font-normal'>(Affiliated to CBSE, New Delhi)</div>
+                                <div className='font-medium'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
+                            </div>
+
+                            <div className='md:hidden flex flex-col text-center'>
+                                <div className='font-bold text-2xl'>Alumni</div>
+                                <div className='font-bold text-2xl'>Vaishali Central School</div>
+                                <div className='font-normal text-sm'>(Affiliated to CBSE, New Delhi)</div>
+                                <div className='font-medium text-sm'>Mahnar Road, Rajason, (Vaishali) Bihar - 844102</div>
                             </div>
                         </div>
 
@@ -106,7 +117,7 @@ const Navbar = () => {
                             <div className={activeTab === 'vcs' ? 'text-blue-700' : ''}>VCS Homepage</div>
                         </Link>
                         {authenticated && (
-                            <div className='cursor-pointer' onClick={() => {signOut(); toggleNavbar}}>Sign Out</div>
+                            <div className='cursor-pointer' onClick={() => { signOut(); toggleNavbar }}>Sign Out</div>
                         )}
                     </div>
                 </div>

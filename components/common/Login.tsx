@@ -12,7 +12,7 @@ const Login = () => {
     return (
         <div className='flex flex-col w-full h-full py-20 items-center justify-center'>
 
-            <div className='md:w-10/12 w-11/12 h-full flex md:flex-row flex-col items-center justify-center overflow-hidden'>
+            <div className='md:w-10/12 w-11/12 h-full flex md:flex-row flex-col md:gap-0 gap-10 items-center justify-center overflow-hidden'>
 
                 <div className='md:w-1/2 w-full h-full flex flex-col items-center justify-center text-center'>
                     {isLogin ? (
