@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 </div>
 
-                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-white text-[#1a1a1a] transition-all flex-col items-center`}>
+                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-white text-[#1a1a1a] transition-all flex-col items-center md:overflow-hidden overflow-y-auto md:pb-0 pb-10`}>
 
                     <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center relative py-4'>
                         <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center'>
@@ -119,6 +119,40 @@ const Navbar = () => {
                         {authenticated && (
                             <div className='cursor-pointer' onClick={() => { signOut(); toggleNavbar }}>Sign Out</div>
                         )}
+                    </div>
+
+                    <div className='w-10/12 h-auto flex flex-col mt-6 uppercase'>
+
+                        <p className='mb-2 text-[#000] text-lg font-semibold'>Useful Links</p>
+                        <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
+                            <Link href='/'>Login & Register</Link>
+                            <Link href='/'>Gallery</Link>
+                            <Link href='/'>About AA</Link>
+                            <Link href='/'>Events & Updates</Link>
+                            <Link href='/'>Terms & Conditions</Link>
+                            <Link href='/'>Privacy Policy</Link>
+                        </div>
+
+                        <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Facilities</p>
+                        <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
+                            <Link href='/'>Classrooms</Link>
+                            <Link href='/'>Library</Link>
+                            <Link href='/'>Computer Lab</Link>
+                            <Link href='/'>Playground</Link>
+                            <Link href='/'>Laboratory</Link>
+                            <Link href='/'>Seminar Room</Link>
+                        </div>
+
+                        <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Other Links</p>
+                        <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
+                            <Link href='/'>Testimonial</Link>
+                            <Link href='/'>Faqs</Link>
+                            <Link href='/'>General Queries</Link>
+                            <Link href='/'>Admission</Link>
+                            <Link href='/'>Webpage</Link>
+                            <Link href='/'>Website Team</Link>
+                        </div>
+
                     </div>
                 </div>
 
