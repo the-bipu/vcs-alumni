@@ -3,35 +3,42 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { UserContext } from '@/context/userContext';
 import { CrossIcon, PenBoxIcon } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 export default function Account() {
+    const router = useRouter();
+
     const { setActiveTab, userData, authenticated } = useContext(UserContext);
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         setActiveTab('account');
-    }, [setActiveTab]);
+
+        if (!authenticated) {
+            router.push('/auth/login')
+        }
+    }, [setActiveTab, authenticated]);
 
     console.log(userData)
 
     return (
-        <div className='min-h-screen bg-white'>
+        <div className='bg-white'>
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Account | Vaishali Central School</title>
-                <meta name="description" content="Manage your Vaishali Central School alumni account. Update your profile, connect with batchmates, and access exclusive alumni features." />
-                <meta name="keywords" content="Vaishali Central School account, alumni login, student portal, profile management, school alumni network" />
+                <title>Login | Vaishali Central School</title>
+                <meta name="description" content="Log in to your Vaishali Central School alumni account to stay connected, update your profile, and engage with the alumni community." />
+                <meta name="keywords" content="Vaishali Central School login, alumni login, student portal, sign in, school alumni network" />
                 <meta name="author" content="vaishalicentralschool.com" />
 
-                <meta property="og:title" content="Account | Vaishali Central School" />
-                <meta property="og:description" content="Access your Vaishali Central School alumni account to stay connected, update your details, and engage with the community." />
+                <meta property="og:title" content="Login | Vaishali Central School" />
+                <meta property="og:description" content="Access your Vaishali Central School alumni account. Log in to connect with batchmates, manage your profile, and stay updated on alumni events." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.vaishalicentralschool.com/account" />
+                <meta property="og:url" content="https://www.vaishalicentralschool.com/auth/login" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Account | Vaishali Central School" />
-                <meta name="twitter:description" content="Log in to your Vaishali Central School account to manage your profile and connect with fellow alumni." />
+                <meta name="twitter:title" content="Login | Vaishali Central School" />
+                <meta name="twitter:description" content="Sign in to your Vaishali Central School alumni account and stay connected with your school community." />
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
