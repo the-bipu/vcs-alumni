@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import JoinUs from '@/components/common/JoinUs';
 
 export default function Alumni() {
     return (
@@ -51,18 +52,7 @@ export default function Alumni() {
                         </div>
                     </div>
 
-                    <div className='flex w-full h-auto items-center justify-center bg-[#aeaeae] py-20'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>Join Us Today !!</h1>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
-                                >
-                                    Join Us
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <JoinUs />
 
                 </div>
 

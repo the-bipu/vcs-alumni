@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
+import JoinUs from '@/components/common/JoinUs';
 
 export default function Home() {
     return (
@@ -34,22 +36,26 @@ export default function Home() {
                     <div className='flex w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
                             <div className='w-1/2 h-auto flex items-center justify-center'>
-                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover' />
+                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-105 object-cover' />
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h1>
-                                <p className='text-base text-[#818181] text-justify'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi illo neque, repellat voluptatum sit, quas quae distinctio reiciendis, at qui? Quod rem sapiente beatae esse omnis tempora ex.
+                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
+                                <p className='text-base text-black text-justify'>
+                                    The Vaishali Central School Alumni Association is a vibrant and supportive community that fosters lifelong connections among former students, faculty, and staff.
+                                    Our alumni network serves as a bridge between the past and the future, allowing graduates to stay connected, share experiences, and contribute to the school's growth.
 
-                                    <br />
+                                    <br /><br />
 
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sint nam commodi hic quos magni adipisci tenetur pariatur fuga obcaecati amet, deleniti voluptas assumenda sunt molestiae, cum ad ipsam. Ullam.
+                                    Through reunions, mentorship programs, and career guidance initiatives, we ensure that our alumni remain engaged and empowered in their personal and professional journeys.
+                                    Whether you want to reconnect with old classmates, share your success stories, or give back to your alma mater, the VCS Alumni Association provides the perfect platform to celebrate our shared legacy.
                                 </p>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full mt-8'
-                                >
-                                    Explore More
-                                </button>
+                                <Link href={'/about'}>
+                                    <button
+                                        className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full mt-8'
+                                    >
+                                        Explore More
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -58,21 +64,25 @@ export default function Home() {
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
                                 <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>Director's Message</h2>
-                                <p className='text-base text-[#818181] text-justify'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit modi illo neque, repellat voluptatum sit, quas quae distinctio reiciendis, at qui? Quod rem sapiente beatae esse omnis tempora ex.
-
-                                    <br />
-
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sint nam commodi hic quos magni adipisci tenetur pariatur fuga obcaecati amet, deleniti voluptas assumenda sunt molestiae, cum ad ipsam. Ullam.
+                                <p className='text-base text-justify text-black'>
+                                    At <strong>Vaishali Central School,</strong> we believe that education is not just about academic excellence but about nurturing responsible, compassionate, and innovative individuals.
+                                    Our goal is to empower young minds with the skills and values necessary to navigate the challenges of the future.
                                 </p>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full mt-8'
-                                >
-                                    Explore More
-                                </button>
+                                <p className='text-base text-justify text-black mt-4'>
+                                    We emphasize a holistic approach to learning, fostering creativity, critical thinking, and a spirit of curiosity.
+                                    With dedicated faculty, state-of-the-art facilities, and a nurturing environment, we are committed to shaping tomorrow’s leaders.
+                                    Let’s work together to build a brighter future for our children!"
+                                </p>
+                                <Link href={'/about'}>
+                                    <button
+                                        className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full mt-8'
+                                    >
+                                        Explore More
+                                    </button>
+                                </Link>
                             </div>
                             <div className='w-1/2 h-auto flex items-center justify-center'>
-                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover' />
+                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-105 object-cover' />
                             </div>
                         </div>
                     </div>
@@ -80,7 +90,7 @@ export default function Home() {
                     <div className='flex w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
                             <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Activities</h1>
+                                <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
                                 <button
                                     className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
                                 >
@@ -101,7 +111,7 @@ export default function Home() {
                     <div className='flex w-full h-auto items-center justify-center bg-[#eaeaea] py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
                             <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Gallery</h1>
+                                <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Gallery</h2>
                                 <button
                                     className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
                                 >
@@ -119,18 +129,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className='flex w-full h-auto items-center justify-center py-20'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>Join Us Today !!</h1>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
-                                >
-                                    Join Us
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <JoinUs />
 
                 </div>
 
