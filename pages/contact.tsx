@@ -23,7 +23,7 @@ export default function Contact() {
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Contact Vaishali Central School | Get in Touch</title>
+                <title>Contact | Vaishali Central School | Get in Touch</title>
                 <meta name="description" content="Reach out to Vaishali Central School for inquiries, admissions, and support. Find our contact details, location, and ways to connect with us." />
                 <meta name="keywords" content="Vaishali Central School contact, school address, school phone number, admission inquiry, Bihar school, get in touch" />
                 <meta name="author" content="vaishalicentralschool.com" />
@@ -52,7 +52,7 @@ export default function Contact() {
 
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-start justify-center gap-8 py-10'>
 
-                            <div className='md:w-1/2 w-full h-full flex flex-col gap-8 items-start justify-center py-6'>
+                            <div className='md:w-1/2 w-full h-full flex flex-col gap-8 md:items-start items-center justify-center py-6'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-80 object-cover rounded shadow' />
                                 <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center text-[#1a1a1a]'>
                                     <Link href='/' className='cursor-pointer'>

@@ -43,11 +43,11 @@ export default function Guidance() {
 
                     <div className='flex flex-col gap-8 w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                            <div className='w-1/2 h-auto flex items-center justify-center'>
+                            <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-80 object-cover border-8 border-white rounded-md shadow-md' />
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535] mb-2'>Career Guidance from Alumni</h1>
+                                <h1 className='md:text-4xl text-2xl font-bold text-[#353535] mb-2'>Career Guidance from Alumni</h1>
                                 <p className='text-base text-black text-justify'>
                                     Navigating the journey from school to a successful career can be challenging, but with the right guidance, the path becomes much clearer. Our distinguished alumni, who have excelled in various fields, are here to mentor and support current students and fellow graduates. Their experiences serve as a roadmap to success, providing valuable insights into industry trends, skill development, and career opportunities.
                                     <br /><br />
@@ -71,7 +71,7 @@ export default function Guidance() {
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center'>
 
                             <div className='w-full h-auto flex flex-col items-center justify-center text-center'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>Career Guidance Enquiry</h2>
+                                <h2 className='md:text-4xl text-2xl font-bold text-[#353535] mb-4'>Career Guidance Enquiry</h2>
                                 <p className='text-base text-[#818181]'>
                                     Need guidance for your career path? Connect with experienced alumni and mentors who can provide insights into various industries, career choices, and skill development.
                                     Fill out the form to get personalized career advice, mentorship, and professional networking opportunities.

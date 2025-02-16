@@ -42,11 +42,11 @@ export default function Home() {
 
                     <div className='flex w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                            <div className='w-1/2 h-auto flex items-center justify-center'>
+                            <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-105 object-cover' />
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
+                                <h2 className='md:text-4xl text-3xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
                                 <p className='text-base text-black text-justify'>
                                     The Vaishali Central School Alumni Association is a vibrant and supportive community that fosters lifelong connections among former students, faculty, and staff.
                                     Our alumni network serves as a bridge between the past and the future, allowing graduates to stay connected, share experiences, and contribute to the school's growth.
@@ -68,9 +68,9 @@ export default function Home() {
                     </div>
 
                     <div className='flex w-full h-auto items-center justify-center bg-[#eaeaea] py-20'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
+                        <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col-reverse items-center justify-center gap-8'>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>Director's Message</h2>
+                                <h2 className='md:text-4xl text-3xl font-bold text-[#353535] mb-4'>Director's Message</h2>
                                 <p className='text-base text-justify text-black'>
                                     At <strong>Vaishali Central School,</strong> we believe that education is not just about academic excellence but about nurturing responsible, compassionate, and innovative individuals.
                                     Our goal is to empower young minds with the skills and values necessary to navigate the challenges of the future.
@@ -88,7 +88,7 @@ export default function Home() {
                                     </button>
                                 </Link>
                             </div>
-                            <div className='w-1/2 h-auto flex items-center justify-center'>
+                            <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-105 object-cover' />
                             </div>
                         </div>
@@ -96,8 +96,8 @@ export default function Home() {
 
                     <div className='flex w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
+                            <div className='w-full h-auto flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between'>
+                                <h2 className='md:text-4xl text-2xl md:text-left text-center font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
                                 <Link href={'/gallery'}>
                                     <button
                                         className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
@@ -119,8 +119,8 @@ export default function Home() {
 
                     <div className='flex w-full h-auto items-center justify-center bg-[#eaeaea] py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Gallery</h2>
+                        <div className='w-full h-auto flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between'>
+                                <h2 className='md:text-4xl text-2xl md:text-left text-center font-bold text-[#353535]'>VCS Alumni Association Gallery</h2>
                                 <Link href={'/gallery'}>
                                     <button
                                         className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'

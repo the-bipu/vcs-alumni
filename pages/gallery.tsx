@@ -15,7 +15,7 @@ export default function Gallery() {
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Vaishali Central School Alumni | Memories That Last a Lifetime</title>
+                <title>Gallery | Vaishali Central School Alumni | Memories That Last a Lifetime</title>
                 <meta name="description" content="Explore unforgettable moments shared by Vaishali Central School alumni. Relive reunions, events, and cherished school memories through our alumni gallery." />
                 <meta name="keywords" content="Vaishali Central School Alumni Gallery, alumni memories, reunions, school events, alumni meet, school life photos" />
                 <meta name="author" content="alumni.vaishalicentralschool.com" />
@@ -56,13 +56,8 @@ export default function Gallery() {
 
                     <div className='flex w-full h-auto items-center justify-center py-20 bg-[#eaeaea]'>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-row items-center justify-between'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
-                                <button
-                                    className='px-6 py-1.5 transition-all bg-transparent hover:bg-black text-black hover:text-[#fff] text-semibold border-2 border-[#000] rounded-full'
-                                >
-                                    Explore More
-                                </button>
+                            <div className='w-full h-auto flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between'>
+                                <h2 className='md:text-4xl text-2xl md:text-left text-center font-bold text-[#353535]'>VCS Alumni Association Activities</h2>
                             </div>
                             <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover' />

@@ -15,7 +15,7 @@ export default function Alumni() {
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Vaishali Central School Alumni | Connect, Inspire, Grow</title>
+                <title>Our Alumni | Vaishali Central School | Connect, Inspire, Grow</title>
                 <meta name="description" content="Stay connected with the vibrant alumni network of Vaishali Central School. Celebrate achievements, share experiences, and strengthen lifelong bonds." />
                 <meta name="keywords" content="Vaishali Central School Alumni, alumni network, VCS alumni, school alumni, reconnect, Bihar alumni, alumni association, alumni success stories" />
                 <meta name="author" content="alumni.vaishalicentralschool.com" />
@@ -41,7 +41,7 @@ export default function Alumni() {
                                 <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Proud Alumni</h1>
                                 <p className='text-base text-justify text-black'> Our alumni have made us proud with their achievements in various fields. From successful careers to impactful contributions to society, they embody the values and excellence of Vaishali Central School. Celebrate their journey and get inspired by their stories! </p>
                             </div>
-                            <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
+                            <div className='w-full h-auto flex flex-row flex-wrap items-center md:justify-between justify-center gap-8'>
 
                                 <div className='flex flex-col gap-4'>
                                     <Image src={'/bg/alumni.jpg'} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />

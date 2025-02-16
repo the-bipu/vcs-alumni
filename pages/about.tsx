@@ -15,7 +15,7 @@ export default function About() {
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>About Vaishali Central School | Excellence in Education</title>
+                <title>About | Vaishali Central School | Excellence in Education</title>
                 <meta name="description" content="Learn more about Vaishali Central School's mission, vision, and commitment to academic excellence and holistic development. Discover our journey and values." />
                 <meta name="keywords" content="About Vaishali Central School, school history, mission, vision, education in Bihar, CBSE school, holistic learning" />
                 <meta name="author" content="vaishalicentralschool.com" />
@@ -37,11 +37,11 @@ export default function About() {
 
                     <div className='flex flex-col gap-8 w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                            <div className='w-1/2 h-auto flex items-center justify-center'>
+                            <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover' />
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
+                                <h2 className='md:text-4xl text-3xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
                                 <p className='text-base text-black text-justify'>
                                     The Vaishali Central School Alumni Association is a vibrant and supportive community that fosters lifelong connections among former students, faculty, and staff.
                                     Our alumni network serves as a bridge between the past and the future, allowing graduates to stay connected, share experiences, and contribute to the school's growth.
@@ -72,9 +72,9 @@ export default function About() {
                     </div>
 
                     <div className='flex flex-col gap-8 w-full h-auto items-center justify-center bg-[#eaeaea] py-20'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
+                        <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col-reverse items-center justify-center gap-8'>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
-                                <h2 className='md:text-4xl text-xl font-bold text-[#353535] mb-4'>Director's Message</h2>
+                                <h2 className='md:text-4xl text-3xl font-bold text-[#353535] mb-4'>Director's Message</h2>
                                 <p className='text-base text-justify text-black'>
                                     At <strong>Vaishali Central School,</strong> we believe that education is not just about academic excellence but about nurturing responsible, compassionate, and innovative individuals.
                                     Our goal is to empower young minds with the skills and values necessary to navigate the challenges of the future.
@@ -85,7 +85,7 @@ export default function About() {
                                     Let’s work together to build a brighter future for our children!"
                                 </p>
                             </div>
-                            <div className='w-1/2 h-auto flex items-center justify-center'>
+                            <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
                                 <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-80 object-cover' />
                             </div>
                         </div>
