@@ -3,12 +3,30 @@ import Image from 'next/image';
 import Head from 'next/head';
 import JoinUs from '@/components/common/JoinUs';
 import { UserContext } from '@/context/userContext';
+import { GetServerSideProps } from 'next';
 
-export default function Alumni() {
+interface AlumniData {
+    email: string;
+    phone: string;
+    fullName: string;
+    profile: string;
+    gender: string;
+    bio: string;
+    dob: string;
+    joiningYear: string;
+    passingYear: string;
+    userType: string;
+    accountType: string;
+    position: string;
+}
+
+export default function Alumni({ alumniData }: any) {
     const { setActiveTab } = useContext(UserContext);
     useEffect(() => {
         setActiveTab('alumni');
     }, [setActiveTab]);
+
+    console.log(alumniData)
 
     return (
         <div className='min-h-screen bg-white'>
@@ -43,37 +61,15 @@ export default function Alumni() {
                             </div>
                             <div className='w-full h-auto flex flex-row flex-wrap items-center md:justify-between justify-center gap-8'>
 
-                                <div className='flex flex-col gap-4'>
-                                    <Image src={'/bg/alumni.jpg'} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
-                                    <div className='flex flex-col text-center'>
-                                        <div className='text-xl text-black'>Randy Orten</div>
-                                        <div className='text-blue-700 text-lg font-semibold'>Computer Science</div>
+                                {alumniData.map((item: any, index: any) => (
+                                    <div key={index} className='flex flex-col gap-4'>
+                                        <Image src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${item?.profile}.png`} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
+                                        <div className='flex flex-col text-center'>
+                                            <div className='text-xl text-black'>{item?.fullName}</div>
+                                            <div className='text-blue-700 text-lg font-semibold'>{item?.position}</div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div className='flex flex-col gap-4'>
-                                    <Image src={'/bg/alumni.jpg'} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
-                                    <div className='flex flex-col text-center'>
-                                        <div className='text-xl text-black'>Randy Orten</div>
-                                        <div className='text-blue-700 text-lg font-semibold'>Computer Science</div>
-                                    </div>
-                                </div>
-
-                                <div className='flex flex-col gap-4'>
-                                    <Image src={'/bg/alumni.jpg'} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
-                                    <div className='flex flex-col text-center'>
-                                        <div className='text-xl text-black'>Randy Orten</div>
-                                        <div className='text-blue-700 text-lg font-semibold'>Computer Science</div>
-                                    </div>
-                                </div>
-
-                                <div className='flex flex-col gap-4'>
-                                    <Image src={'/bg/alumni.jpg'} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
-                                    <div className='flex flex-col text-center'>
-                                        <div className='text-xl text-black'>Randy Orten</div>
-                                        <div className='text-blue-700 text-lg font-semibold'>Computer Science</div>
-                                    </div>
-                                </div>
+                                ))}
 
                             </div>
                         </div>
@@ -88,3 +84,12 @@ export default function Alumni() {
         </div>
     );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_MAIN_ROUTE}/api/users/diamond`);
+    const alumniData: AlumniData[] = await res.json();
+
+    return {
+        props: { alumniData },
+    };
+};
