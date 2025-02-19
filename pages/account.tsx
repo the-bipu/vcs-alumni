@@ -432,8 +432,8 @@ export default function Account() {
                                     </div>
                                 </div>
                             ) : (
-                                <div className='w-full h-auto flex flex-row gap-10 items-start justify-start'>
-                                    <div className='flex flex-col gap-4 min-w-96'>
+                                <div className='w-full h-auto flex md:flex-row flex-col gap-10 items-start justify-start'>
+                                    <div className='flex flex-col gap-4 md:min-w-96 w-full'>
                                         <Image
                                             src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData?.profile}.png`}
                                             alt='profile'
@@ -442,7 +442,7 @@ export default function Account() {
                                             priority={true}
                                             className='w-96 h-96 object-cover border-4 border-white shadow'
                                         />
-                                        <div className='w-full flex flex-col items-center justify-between gap-4'>
+                                        <div className='w-full md:flex hidden flex-col items-center justify-between gap-4'>
                                             <div className='flex flex-col gap-2 w-full'>
                                                 <Label className='text-base'>Full Name</Label>
                                                 <Input defaultValue={userData?.fullName} disabled />
@@ -470,7 +470,7 @@ export default function Account() {
                                                 <Input defaultValue={userData?.userType} className='capitalize' disabled />
                                             </div>
                                         </div>
-                                        <div className='w-full flex flex-row flex-wrap items-center justify-between md:gap-0 gap-4'>
+                                        <div className='w-full md:hidden flex flex-row flex-wrap items-center justify-between md:gap-0 gap-4'>
                                             <div className='flex flex-col gap-2 md:w-[49%] w-full'>
                                                 <Label className='text-base'>Full Name</Label>
                                                 <Input defaultValue={userData?.fullName} disabled />
