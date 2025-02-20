@@ -433,7 +433,7 @@ export default function Account() {
                                 </div>
                             ) : (
                                 <div className='w-full h-auto flex md:flex-row flex-col gap-10 items-start justify-start'>
-                                    <div className='flex flex-col gap-4 md:min-w-96 w-full'>
+                                    <div className='flex flex-col gap-4 md:min-w-96 min-w-full'>
                                         <Image
                                             src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData?.profile}.png`}
                                             alt='profile'
@@ -517,7 +517,7 @@ export default function Account() {
                                         <div className='w-full flex flex-row flex-wrap items-center justify-between md:gap-0 gap-4'>
                                             <div className='flex flex-col gap-2 w-full'>
                                                 <Label className='text-base'>Bio</Label>
-                                                <Textarea defaultValue={userData?.bio} disabled />
+                                                <Textarea defaultValue={userData?.bio} className='min-h-32' disabled />
                                             </div>
                                         </div>
                                     </div>
@@ -534,18 +534,3 @@ export default function Account() {
         </div>
     );
 }
-
-// interface AlumniData {
-//     email: string;
-//     phone: string;
-//     fullName: string;
-//     profile: string;
-//     gender: string;
-//     bio: string;
-//     dob: string;
-//     joiningYear: string;
-//     passingYear: string;
-//     userType: string;
-//     accountType: string;
-//     position: string;
-// }
