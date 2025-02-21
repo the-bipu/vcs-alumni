@@ -65,8 +65,8 @@ export default function Alumni({ alumniData }: any) {
                                     <div key={index} className='flex flex-col gap-4'>
                                         <Image src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${item?.profile}.png`} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
                                         <div className='flex flex-col text-center'>
-                                            <div className='text-xl text-black'>{item?.fullName}</div>
-                                            <div className='text-blue-700 text-lg font-semibold'>{item?.position}</div>
+                                            <div className='text-xl font-semibold cursor-pointer text-black transition-all hover:underline'>{item?.fullName}</div>
+                                            <div className='text-blue-700 text-base font-medium'>{item?.position}</div>
                                         </div>
                                     </div>
                                 ))}

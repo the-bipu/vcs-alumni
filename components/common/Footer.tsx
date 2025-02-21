@@ -47,32 +47,32 @@ const Footer = () => {
 
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Useful Links</p>
-              <Link href='/' className='font-normal w-52'>Login & Register</Link>
-              <Link href='/' className='font-normal w-52'>Gallery</Link>
-              <Link href='/' className='font-normal w-52'>About AA</Link>
-              <Link href='/' className='font-normal w-52'>Events & Updates</Link>
-              <Link href='/' className='font-normal w-52'>Terms & Conditions</Link>
-              <Link href='/' className='font-normal w-52'>Privacy Policy</Link>
+              <Link href='/auth/login' className='font-normal w-52'>Login & Register</Link>
+              <Link href='/gallery' className='font-normal w-52'>Activities</Link>
+              <Link href='/about' className='font-normal w-52'>About Association</Link>
+              <Link href='/events' className='font-normal w-52'>Events & Updates</Link>
+              <Link href='/terms' className='font-normal w-52'>Terms & Conditions</Link>
+              <Link href='/privacy' className='font-normal w-52'>Privacy Policy</Link>
             </div>
 
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Facilities</p>
-              <Link href='/' className='font-normal w-52'>Classrooms</Link>
-              <Link href='/about' className='font-normal w-52'>Library</Link>
-              <Link href='/alumni' className='font-normal w-52'>Computer Lab</Link>
-              <Link href='/gallery' className='font-normal w-52'>Playground</Link>
-              <Link href='/guidance' className='font-normal w-52'>Laboratory</Link>
-              <Link href='/get-started' className='font-normal w-52'>Seminar Room</Link>
+              <Link href='/facility/classrooms' className='font-normal w-52'>Classrooms</Link>
+              <Link href='/facility/library' className='font-normal w-52'>Library</Link>
+              <Link href='/facility/computer-labs' className='font-normal w-52'>Computer Lab</Link>
+              <Link href='/facility/playground' className='font-normal w-52'>Playground</Link>
+              <Link href='/facility/laboratory' className='font-normal w-52'>Laboratory</Link>
+              <Link href='/facility/seminar-room' className='font-normal w-52'>Seminar Room</Link>
             </div>
 
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Other Links</p>
-              <Link href='/' className='font-normal w-52'>Testimonial</Link>
-              <Link href='/about' className='font-normal w-52'>Faqs</Link>
-              <Link href='/alumni' className='font-normal w-52'>General Queries</Link>
-              <Link href='/gallery' className='font-normal w-52'>Admission</Link>
-              <Link href='/guidance' className='font-normal w-52'>Webpage</Link>
-              <Link href='/get-started' className='font-normal w-52'>Website Team</Link>
+              <Link href='/testimonial' className='font-normal w-52'>Testimonial</Link>
+              <Link href='/faqs' className='font-normal w-52'>Faqs</Link>
+              <Link href='/queries' className='font-normal w-52'>General Queries</Link>
+              <Link href='/' className='font-normal w-52'>Admission</Link>
+              <Link href='/' className='font-normal w-52'>Webpage</Link>
+              <Link href='/website-team' className='font-normal w-52'>Website Team</Link>
             </div>
 
             <div className='w-auto flex flex-col gap-3'>
