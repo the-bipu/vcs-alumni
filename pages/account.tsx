@@ -19,6 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
 
 import { CldImage, CldUploadWidget } from 'next-cloudinary';
+import { FaUpload } from 'react-icons/fa';
 
 const formSchema = z.object({
     fullName: z.string().min(2).max(50),
@@ -157,9 +158,9 @@ export default function Account() {
                                         }}>
                                             {({ open }) => {
                                                 return (
-                                                    <button onClick={() => open()}>
-                                                        Upload an Image
-                                                    </button>
+                                                    <Button onClick={() => open()}>
+                                                        <FaUpload /> Upload an Image
+                                                    </Button>
                                                 );
                                             }}
                                         </CldUploadWidget>

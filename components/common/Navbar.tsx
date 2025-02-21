@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 </div>
 
-                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-white text-[#1a1a1a] transition-all flex-col items-center md:overflow-hidden overflow-y-auto md:pb-0 pb-10`}>
+                <div className={`${isActive ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-white text-[#1a1a1a] transition-all flex-col items-center md:overflow-hidden overflow-y-auto md:pb-0 pb-10 z-50`}>
 
                     <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center relative py-4'>
                         <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center'>
