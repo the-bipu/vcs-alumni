@@ -1,2 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+Disallow: /account
+Disallow: /account/*
+Sitemap: https://vcs-alumni.vercel.app/sitemap.xml
