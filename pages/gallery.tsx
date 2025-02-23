@@ -18,12 +18,12 @@ export default function Gallery() {
                 <title>Gallery | Vaishali Central School Alumni | Memories That Last a Lifetime</title>
                 <meta name="description" content="Explore unforgettable moments shared by Vaishali Central School alumni. Relive reunions, events, and cherished school memories through our alumni gallery." />
                 <meta name="keywords" content="Vaishali Central School Alumni Gallery, alumni memories, reunions, school events, alumni meet, school life photos" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Vaishali Central School Alumni | Memories That Last a Lifetime" />
                 <meta property="og:description" content="Take a nostalgic journey through the Vaishali Central School Alumni Gallery. Reconnect with old friends and relive the best moments of your school life." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/gallery" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/gallery" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Vaishali Central School Alumni | Memories That Last a Lifetime" />

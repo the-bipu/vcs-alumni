@@ -36,12 +36,12 @@ export default function Alumni({ alumniData }: any) {
                 <title>Our Alumni | Vaishali Central School | Connect, Inspire, Grow</title>
                 <meta name="description" content="Stay connected with the vibrant alumni network of Vaishali Central School. Celebrate achievements, share experiences, and strengthen lifelong bonds." />
                 <meta name="keywords" content="Vaishali Central School Alumni, alumni network, VCS alumni, school alumni, reconnect, Bihar alumni, alumni association, alumni success stories" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Vaishali Central School Alumni | Connect, Inspire, Grow" />
                 <meta property="og:description" content="Join the VCS Alumni Association and be part of a thriving community that celebrates success, fosters connections, and supports future generations." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/alumni" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/alumni" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Vaishali Central School Alumni | Connect, Inspire, Grow" />

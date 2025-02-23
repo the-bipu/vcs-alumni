@@ -18,12 +18,12 @@ export default function About() {
                 <title>About | Vaishali Central School | Excellence in Education</title>
                 <meta name="description" content="Learn more about Vaishali Central School's mission, vision, and commitment to academic excellence and holistic development. Discover our journey and values." />
                 <meta name="keywords" content="About Vaishali Central School, school history, mission, vision, education in Bihar, CBSE school, holistic learning" />
-                <meta name="author" content="vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="About Vaishali Central School | Excellence in Education" />
                 <meta property="og:description" content="Explore the legacy of Vaishali Central School, our vision for the future, and how we shape young minds through quality education and innovative learning methods." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.vaishalicentralschool.com/about" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/about" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="About Vaishali Central School | Excellence in Education" />

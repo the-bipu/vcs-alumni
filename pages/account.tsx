@@ -115,12 +115,12 @@ export default function Account() {
                 <title>Login | Vaishali Central School</title>
                 <meta name="description" content="Log in to your Vaishali Central School alumni account to stay connected, update your profile, and engage with the alumni community." />
                 <meta name="keywords" content="Vaishali Central School login, alumni login, student portal, sign in, school alumni network" />
-                <meta name="author" content="vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Login | Vaishali Central School" />
                 <meta property="og:description" content="Access your Vaishali Central School alumni account. Log in to connect with batchmates, manage your profile, and stay updated on alumni events." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.vaishalicentralschool.com/auth/login" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/account" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Login | Vaishali Central School" />

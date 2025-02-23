@@ -29,12 +29,12 @@ export default function Gallery() {
                 <title>General Queries | Vaishali Central School Alumni | {currentYear}</title>
                 <meta name="description" content="Have questions about Vaishali Central School Alumni? Find answers to common queries regarding membership, events, networking, and alumni benefits." />
                 <meta name="keywords" content="Vaishali Central School General Queries, alumni support, school alumni FAQs, alumni help, alumni assistance" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="General Queries | Vaishali Central School Alumni" />
                 <meta property="og:description" content="Need help? Explore answers to common queries about Vaishali Central School Alumni, including registration, events, and staying connected." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/general-queries" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/queries" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="General Queries | Vaishali Central School Alumni" />

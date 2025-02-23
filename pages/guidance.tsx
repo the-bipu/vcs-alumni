@@ -24,12 +24,12 @@ export default function Guidance() {
                 <title>Career Guidance | Vaishali Central School Alumni</title>
                 <meta name="description" content="Gain career insights, mentorship, and professional guidance from Vaishali Central School alumni. Learn from industry experts and shape your future." />
                 <meta name="keywords" content="Career guidance, alumni mentorship, Vaishali Central School, professional growth, career counseling, networking" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Career Guidance | Vaishali Central School Alumni" />
                 <meta property="og:description" content="Explore career opportunities, mentorship programs, and expert guidance from successful Vaishali Central School alumni." />
                 <meta property="og:image" content="/logo/og-career.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/career-guidance" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/guidance" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Career Guidance | Vaishali Central School Alumni" />

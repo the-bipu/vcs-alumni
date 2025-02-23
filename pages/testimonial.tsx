@@ -19,12 +19,12 @@ export default function Gallery() {
                 <title>Testimonial | Vaishali Central School Alumni | {currentYear}</title>
                 <meta name="description" content="Read inspiring testimonials from Vaishali Central School alumni. Discover their experiences, achievements, and how the school shaped their journey." />
                 <meta name="keywords" content="Vaishali Central School testimonials, alumni success stories, school experiences, student testimonials, alumni feedback" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Testimonial | Vaishali Central School Alumni" />
                 <meta property="og:description" content="Explore heartfelt testimonials from Vaishali Central School alumni, sharing their success stories and cherished memories." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/testimonial" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/testimonial" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Testimonial | Vaishali Central School Alumni" />

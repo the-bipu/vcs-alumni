@@ -20,12 +20,12 @@ export default function Gallery() {
                 <title>Website Team | Vaishali Central School Alumni | {currentYear}</title>
                 <meta name="description" content="Meet the dedicated website team behind Vaishali Central School Alumni. Learn about the developers, designers, and contributors who maintain and enhance our online platform." />
                 <meta name="keywords" content="Vaishali Central School website team, alumni website developers, school website management, alumni portal team" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Website Team | Vaishali Central School Alumni" />
                 <meta property="og:description" content="Discover the passionate team managing the Vaishali Central School Alumni website, ensuring a seamless experience for alumni worldwide." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/website-team" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/developers" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Website Team | Vaishali Central School Alumni" />
