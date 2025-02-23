@@ -18,14 +18,15 @@ export default function Home() {
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
                 <title>Vaishali Central School Alumni | Stay Connected, Stay Inspired</title>
+                <meta name="google-site-verification" content="IglenbFjY-IMapS880ujO1AWTLZ-PZjAe8uWRYU-hjE" />
                 <meta name="description" content="Reconnect with old friends, network with fellow alumni, and celebrate the legacy of Vaishali Central School. Join the official alumni community today!" />
                 <meta name="keywords" content="Vaishali Central School Alumni, alumni network, school alumni, reconnect, Bihar alumni, alumni association" />
-                <meta name="author" content="alumni.vaishalicentralschool.com" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
                 <meta property="og:title" content="Vaishali Central School Alumni | Stay Connected, Stay Inspired" />
                 <meta property="og:description" content="Join the official alumni network of Vaishali Central School, Vaishali, Bihar. Connect with former classmates and relive cherished memories." />
                 <meta property="og:image" content="/logo/og-vcs.png" />
-                <meta property="og:url" content="https://www.alumni.vaishalicentralschool.com/" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Vaishali Central School Alumni | Stay Connected, Stay Inspired" />
