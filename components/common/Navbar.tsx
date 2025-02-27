@@ -125,32 +125,32 @@ const Navbar = () => {
 
                         <p className='mb-2 text-[#000] text-lg font-semibold'>Useful Links</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/'>Login & Register</Link>
-                            <Link href='/'>Gallery</Link>
-                            <Link href='/'>About AA</Link>
-                            <Link href='/'>Events & Updates</Link>
-                            <Link href='/'>Terms & Conditions</Link>
-                            <Link href='/'>Privacy Policy</Link>
+                            <Link href='/auth/login'>Login & Register</Link>
+                            <Link href='/gallery'>Gallery</Link>
+                            <Link href='/about'>About AA</Link>
+                            <Link href='/events'>Events & Updates</Link>
+                            <Link href='/terms'>Terms & Conditions</Link>
+                            <Link href='/privacy'>Privacy Policy</Link>
                         </div>
 
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Facilities</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/'>Classrooms</Link>
-                            <Link href='/'>Library</Link>
-                            <Link href='/'>Computer Lab</Link>
-                            <Link href='/'>Playground</Link>
-                            <Link href='/'>Laboratory</Link>
-                            <Link href='/'>Seminar Room</Link>
+                            <Link href='/facility/classrooms'>Classrooms</Link>
+                            <Link href='/facility/library'>Library</Link>
+                            <Link href='/facility/computer-labs'>Computer Lab</Link>
+                            <Link href='/facility/playground'>Playground</Link>
+                            <Link href='/facility/laboratory'>Laboratory</Link>
+                            <Link href='/facility/seminar-room'>Seminar Room</Link>
                         </div>
 
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Other Links</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/'>Testimonial</Link>
-                            <Link href='/'>Faqs</Link>
-                            <Link href='/'>General Queries</Link>
-                            <Link href='/'>Admission</Link>
-                            <Link href='/'>Webpage</Link>
-                            <Link href='/'>Website Team</Link>
+                            <Link href='/testimonial'>Testimonial</Link>
+                            <Link href='/faqs'>Faqs</Link>
+                            <Link href='/queries'>General Queries</Link>
+                            <Link href='/admission'>Admission</Link>
+                            <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>Webpage</Link>
+                            <Link href='/developers'>Website Team</Link>
                         </div>
 
                     </div>

@@ -70,8 +70,8 @@ const Footer = () => {
               <Link href='/testimonial' className='font-normal w-52'>Testimonial</Link>
               <Link href='/faqs' className='font-normal w-52'>Faqs</Link>
               <Link href='/queries' className='font-normal w-52'>General Queries</Link>
-              <Link href='/' className='font-normal w-52'>Admission</Link>
-              <Link href='/' className='font-normal w-52'>Webpage</Link>
+              <Link href='/admission' className='font-normal w-52'>Admission</Link>
+              <Link href='https://vaishalicentralschool.vercel.app' target='_blank' className='font-normal w-52'>Webpage</Link>
               <Link href='/developers' className='font-normal w-52'>Website Team</Link>
             </div>
 

@@ -68,4 +68,3 @@ export default function Privacy() {
         </div>
     );
 }
-Privacy
