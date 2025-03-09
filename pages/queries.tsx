@@ -46,6 +46,14 @@ export default function Gallery() {
 
                 <div className='w-full h-auto flex flex-col items-center justify-center border-b border-b-[#acacac]'>
 
+                    <div className='w-full h-auto flex items-center justify-center relative'>
+                        <Image src={'/bg/header-vcs.png'} alt='page header vcs' width={550} height={550} priority={true} className='w-full h-64 object-cover' />
+                        <div className='absolute flex flex-col gap-2 items-center justify-center text-black text-center'>
+                            <div className='md:text-4xl text-3xl font-bold text-[#353535]'>General Queries</div>
+                            <div className='text-lg font-medium'>Find answers to common queries below.</div>
+                        </div>
+                    </div>
+
                     <div className='flex w-full h-auto items-center justify-center py-20 bg-[#eaeaea]'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
 
