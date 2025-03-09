@@ -38,7 +38,7 @@ export default function About() {
                     <div className='flex flex-col gap-8 w-full h-auto items-center justify-center py-20'>
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
                             <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
-                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover' />
+                                <Image src={'/connect/about.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover rounded-md shadow-md' />
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-center'>
                                 <h2 className='md:text-4xl text-3xl font-bold text-[#353535] mb-4'>VCS Alumni Association</h2>
@@ -86,7 +86,7 @@ export default function About() {
                                 </p>
                             </div>
                             <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
-                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-80 object-cover' />
+                                <Image src={'/about/director.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-96 object-cover shadow-md rounded-md' />
                             </div>
                         </div>
                         <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center text-base text-black text-justify'>

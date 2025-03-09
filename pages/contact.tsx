@@ -53,7 +53,7 @@ export default function Contact() {
                         <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-start justify-center gap-8 py-10'>
 
                             <div className='md:w-1/2 w-full h-full flex flex-col gap-8 md:items-start items-center justify-center py-6'>
-                                <Image src={'/bg/alumni.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-full h-80 object-cover rounded shadow' />
+                                <Image src={'/connect/reach-us.png'} alt='sphere' width={550} height={550} priority={true} className='w-full h-105 object-cover rounded shadow' />
                                 <div className='flex md:flex-row flex-col md:gap-10 gap-4 items-center text-[#1a1a1a]'>
                                     <Link href='/' className='cursor-pointer'>
                                         <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className='md:w-28 w-24' />
