@@ -40,7 +40,7 @@ const Login = () => {
                     )}
                 </div>
                 <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
-                    <Image src={'/connect/connect.jpg'} alt='connect' width={550} height={550} priority={true} className='border-8 border-white shadow-md w-full h-96 object-cover rounded-md' />
+                    <Image src={'/connect/about.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
                 </div>
             </div>
 

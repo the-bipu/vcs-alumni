@@ -1,6 +1,7 @@
 'use client';
 
 import { UserContext } from '@/context/userContext';
+import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link';
@@ -14,18 +15,6 @@ const Navbar = () => {
     const toggleNavbar = () => {
         setIsActive(!isActive);
     };
-
-    useEffect(() => {
-        if (isActive) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
-
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [isActive]);
 
     return (
         <div className='flex flex-col w-full h-auto shadow'>
@@ -52,8 +41,8 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className='flex w-10 h-10 rounded items-center justify-center cursor-pointer shadow'>
-                        <Image src='/navbar/dash.svg' alt='dash logo' width={30} height={30} onClick={toggleNavbar} />
+                    <div className='flex w-10 h-10 rounded items-center justify-center cursor-pointer shadow' onClick={toggleNavbar}>
+                        <HamburgerMenuIcon className='w-5 h-5' />
                     </div>
 
                 </div>
@@ -81,7 +70,7 @@ const Navbar = () => {
                         </div>
 
                         <div className={`flex w-10 h-10 rounded items-center justify-center cursor-pointer shadow ${isActive ? 'block' : ''}`} onClick={toggleNavbar}>
-                            <Image src='/navbar/cross.svg' alt='dash logo' width={30} height={30} />
+                            <Cross1Icon className='w-5 h-5' />
                         </div>
                     </div>
 
@@ -113,7 +102,7 @@ const Navbar = () => {
                                 <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
                             </Link>
                         )}
-                        <Link href='/' target='_blank'>
+                        <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>
                             <div className={activeTab === 'vcs' ? 'text-blue-700' : ''}>VCS Homepage</div>
                         </Link>
                         {authenticated && (
@@ -125,32 +114,32 @@ const Navbar = () => {
 
                         <p className='mb-2 text-[#000] text-lg font-semibold'>Useful Links</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/auth/login'>Login & Register</Link>
-                            <Link href='/gallery'>Gallery</Link>
-                            <Link href='/about'>About AA</Link>
-                            <Link href='/events'>Events & Updates</Link>
-                            <Link href='/terms'>Terms & Conditions</Link>
-                            <Link href='/privacy'>Privacy Policy</Link>
+                            <Link href='/auth/login' onClick={toggleNavbar}>Login & Register</Link>
+                            <Link href='/gallery' onClick={toggleNavbar}>Gallery</Link>
+                            <Link href='/about' onClick={toggleNavbar}>About AA</Link>
+                            <Link href='/events' onClick={toggleNavbar}>Events & Updates</Link>
+                            <Link href='/terms' onClick={toggleNavbar}>Terms & Conditions</Link>
+                            <Link href='/privacy' onClick={toggleNavbar}>Privacy Policy</Link>
                         </div>
 
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Facilities</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/facility/classrooms'>Classrooms</Link>
-                            <Link href='/facility/library'>Library</Link>
-                            <Link href='/facility/computer-labs'>Computer Lab</Link>
-                            <Link href='/facility/playground'>Playground</Link>
-                            <Link href='/facility/laboratory'>Laboratory</Link>
-                            <Link href='/facility/seminar-room'>Seminar Room</Link>
+                            <Link href='/facility/classrooms' onClick={toggleNavbar}>Classrooms</Link>
+                            <Link href='/facility/library' onClick={toggleNavbar}>Library</Link>
+                            <Link href='/facility/computer-labs' onClick={toggleNavbar}>Computer Lab</Link>
+                            <Link href='/facility/playground' onClick={toggleNavbar}>Playground</Link>
+                            <Link href='/facility/laboratory' onClick={toggleNavbar}>Laboratory</Link>
+                            <Link href='/facility/seminar-room' onClick={toggleNavbar}>Seminar Room</Link>
                         </div>
 
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Other Links</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/testimonial'>Testimonial</Link>
-                            <Link href='/faqs'>Faqs</Link>
-                            <Link href='/queries'>General Queries</Link>
-                            <Link href='/admission'>Admission</Link>
+                            <Link href='/testimonial' onClick={toggleNavbar}>Testimonial</Link>
+                            <Link href='/faqs' onClick={toggleNavbar}>Faqs</Link>
+                            <Link href='/queries' onClick={toggleNavbar}>General Queries</Link>
+                            <Link href='/admission' onClick={toggleNavbar}>Admission</Link>
                             <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>Webpage</Link>
-                            <Link href='/developers'>Website Team</Link>
+                            <Link href='/developers' onClick={toggleNavbar}>Website Team</Link>
                         </div>
 
                     </div>
@@ -187,7 +176,7 @@ const Navbar = () => {
                             <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
                         </Link>
                     )}
-                    <Link href='/' target='_blank'>
+                    <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>
                         <div className={activeTab === 'vcs' ? 'text-blue-700' : ''}>VCS Homepage</div>
                     </Link>
                     {authenticated && (

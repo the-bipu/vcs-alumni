@@ -74,6 +74,28 @@ body {
   }
 }
 
+@layer utilities {
+  body {
+    @apply overflow-y-scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1967d2;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #151515;
+  }
+}
+
 /* Loader styles */
 .loader {
   width: 150px;
