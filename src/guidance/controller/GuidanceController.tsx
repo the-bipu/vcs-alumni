@@ -1,3 +1,5 @@
+import Footer from '@/src/common/Footer';
+import Navbar from '@/src/common/Navbar';
 import React, { useState } from 'react';
 
 const GuidanceController = (props?: any) => {
@@ -23,7 +25,9 @@ const GuidanceController = (props?: any) => {
 
     return (
         <div>
+            <Navbar />
             {childrenWithProps}
+            <Footer />
         </div>
     );
 };

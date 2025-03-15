@@ -20,6 +20,8 @@ import { Separator } from '@/components/ui/separator';
 
 import { CldImage, CldUploadWidget } from 'next-cloudinary';
 import { FaUpload } from 'react-icons/fa';
+import Navbar from '@/src/common/Navbar';
+import Footer from '@/src/common/Footer';
 
 const formSchema = z.object({
     fullName: z.string().min(2).max(50),
@@ -112,7 +114,7 @@ export default function Account() {
 
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Login | Vaishali Central School</title>
+                <title>Account | Vaishali Central School Alumni</title>
                 <meta name="description" content="Log in to your Vaishali Central School alumni account to stay connected, update your profile, and engage with the alumni community." />
                 <meta name="keywords" content="Vaishali Central School login, alumni login, student portal, sign in, school alumni network" />
                 <meta name="author" content="vcs-alumni.vercel.app" />
@@ -127,6 +129,8 @@ export default function Account() {
                 <meta name="twitter:description" content="Sign in to your Vaishali Central School alumni account and stay connected with your school community." />
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
+
+            <Navbar />
 
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
@@ -531,6 +535,8 @@ export default function Account() {
                 </div>
 
             </div>
+
+            <Footer />
 
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '@/src/common/Navbar';
 
 const TermsController = (props?: any) => {
     const {
@@ -23,6 +24,7 @@ const TermsController = (props?: any) => {
 
     return (
         <div>
+            <Navbar />
             {childrenWithProps}
         </div>
     );

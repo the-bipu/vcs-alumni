@@ -4,6 +4,8 @@ import Head from 'next/head';
 import JoinUs from '@/components/common/JoinUs';
 import { UserContext } from '@/context/userContext';
 import { GetServerSideProps } from 'next';
+import Navbar from '@/src/common/Navbar';
+import Footer from '@/src/common/Footer';
 
 interface AlumniData {
     email: string;
@@ -49,6 +51,8 @@ export default function Alumni({ alumniData }: any) {
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
+            <Navbar />
+
             <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
 
                 <div className='w-full h-auto flex flex-col items-center justify-center'>
@@ -80,6 +84,8 @@ export default function Alumni({ alumniData }: any) {
                 </div>
 
             </div>
+
+            <Footer />
 
         </div>
     );

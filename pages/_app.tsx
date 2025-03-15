@@ -1,8 +1,6 @@
 import type { AppProps } from 'next/app'
 import { Metadata } from 'next'
 import '../app/globals.css'
-import Navbar from '@/components/common/Navbar';
-import Footer from '@/components/common/Footer';
 
 import { UserProvider } from '@/context/userContext'
 import { SessionProvider } from 'next-auth/react';
@@ -17,9 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <SessionProvider session={pageProps.session}>
                 <UserProvider>
-                    <Navbar />
                     <Component {...pageProps} />
-                    <Footer />
                 </UserProvider>
             </SessionProvider>
         </>

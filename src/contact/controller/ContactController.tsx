@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Footer from '@/src/common/Footer';
+import Navbar from '@/src/common/Navbar';
 
 const ContactController = (props?: any) => {
     const {
@@ -23,7 +25,9 @@ const ContactController = (props?: any) => {
 
     return (
         <div>
+            <Navbar />
             {childrenWithProps}
+            <Footer />
         </div>
     );
 };
