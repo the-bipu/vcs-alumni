@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import Head from 'next/head';
-import JoinUs from '@/components/common/JoinUs';
-import { UserContext } from '@/context/userContext';
-import { GetServerSideProps } from 'next';
-import Navbar from '@/src/common/Navbar';
-import Footer from '@/src/common/Footer';
+
+import type { GetServerSideProps, NextPage } from 'next';
+import { AlumniController } from '@/src/alumni/controller/AlumniController';
+import AlumniView from '@/src/alumni/views/AlumniView';
 
 interface AlumniData {
     email: string;
@@ -22,16 +20,13 @@ interface AlumniData {
     position: string;
 }
 
-export default function Alumni({ alumniData }: any) {
-    const { setActiveTab } = useContext(UserContext);
-    
-    useEffect(() => {
-        setActiveTab('alumni');
-    }, [setActiveTab]);
+interface AlumniPageProps {
+    alumniData: AlumniData[];
+}
 
+const AlumniPage: React.FC<AlumniPageProps> = ({ alumniData }) => {
     return (
-        <div className='min-h-screen bg-white'>
-
+        <AlumniController alumniData={alumniData}>
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
                 <title>Our Alumni | Vaishali Central School | Connect, Inspire, Grow</title>
@@ -50,45 +45,12 @@ export default function Alumni({ alumniData }: any) {
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
-            <Navbar />
-
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
-
-                <div className='w-full h-auto flex flex-col items-center justify-center'>
-
-                    <div className='flex w-full h-auto items-center justify-center py-20 border-b border-b-[#acacac]'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-col items-start gap-2'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Proud Alumni</h1>
-                                <p className='text-base text-justify text-black'> Our alumni have made us proud with their achievements in various fields. From successful careers to impactful contributions to society, they embody the values and excellence of Vaishali Central School. Celebrate their journey and get inspired by their stories! </p>
-                            </div>
-                            <div className='w-full h-auto flex flex-row flex-wrap items-center md:justify-between justify-center gap-8'>
-
-                                {alumniData.map((item: any, index: any) => (
-                                    <div key={index} className='flex flex-col gap-4'>
-                                        <Image src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${item?.profile}.png`} alt='sphere' width={288} height={288} priority={true} className='w-72 h-72 border-8 border-white shadow-md rounded-full object-cover' />
-                                        <div className='flex flex-col text-center'>
-                                            <div className='text-xl font-semibold cursor-pointer text-black transition-all hover:underline'>{item?.fullName}</div>
-                                            <div className='text-blue-700 text-base font-medium'>{item?.position}</div>
-                                        </div>
-                                    </div>
-                                ))}
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <JoinUs />
-
-                </div>
-
-            </div>
-
-            <Footer />
-
-        </div>
+            <AlumniView alumniData={alumniData} />
+        </AlumniController>
     );
-}
+};
+
+export default AlumniPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_MAIN_ROUTE}/api/users/diamond`);
