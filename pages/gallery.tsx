@@ -1,18 +1,13 @@
-import React, { useContext, useEffect } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import Head from 'next/head';
-import JoinUs from '@/components/common/JoinUs';
-import { UserContext } from '@/context/userContext';
 
-export default function Gallery() {
-    const { setActiveTab } = useContext(UserContext);
-    useEffect(() => {
-        setActiveTab('gallery');
-    }, [setActiveTab]);
+import type { NextPage } from 'next';
+import { GalleryController } from '@/src/gallery/controller/GalleryController';
+import GalleryView from '@/src/gallery/views/GalleryView';
 
-    return (
-        <div className='min-h-screen bg-white'>
-
+const GalleryPage: NextPage = (props) => (
+    <div>
+        <GalleryController {...props}>
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
                 <title>Gallery | Vaishali Central School Alumni | Memories That Last a Lifetime</title>
@@ -31,51 +26,9 @@ export default function Gallery() {
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
-            <div className='w-full h-auto flex flex-col gap-6 items-center justify-center'>
+            <GalleryView />
+        </GalleryController>
+    </div>
+);
 
-                <div className='w-full h-auto flex flex-col items-center justify-center border-b border-b-[#acacac]'>
-
-                    <div className='flex w-full h-auto items-center justify-center py-20'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex flex-col items-start gap-2'>
-                                <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>VCS Alumni Association Gallery</h1>
-                                <p className='text-base text-justify text-black'>
-                                    Explore the VCS Alumni Association Gallery and relive the unforgettable moments of your school days. From reunions to special events, these snapshots celebrate our shared journey and lifelong connections.
-                                </p>
-                            </div>
-                            <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
-                                <Image src={'/gallery/gallery1.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/gallery/gallery2.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/gallery/gallery3.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/gallery/gallery4.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/gallery/gallery5.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/gallery/gallery6.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='flex w-full h-auto items-center justify-center py-20 bg-[#eaeaea]'>
-                        <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
-                            <div className='w-full h-auto flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between'>
-                                <h2 className='md:text-4xl text-2xl md:text-left text-center font-bold text-[#353535]'>VCS Alumni Association Meetups</h2>
-                            </div>
-                            <div className='w-full h-auto flex flex-row flex-wrap items-center justify-between gap-8'>
-                                <Image src={'/meetups/meetup1.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/meetups/meetup2.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/meetups/meetup3.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/meetups/meetup4.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/meetups/meetup5.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                                <Image src={'/meetups/meetup6.jpg'} alt='sphere' width={550} height={550} priority={true} className='w-96 h-80 object-cover rounded-md shadow-md' />
-                            </div>
-                        </div>
-                    </div>
-
-                    <JoinUs />
-
-                </div>
-
-            </div>
-
-        </div>
-    );
-}
+export default GalleryPage;
