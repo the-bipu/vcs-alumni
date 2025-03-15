@@ -24,11 +24,10 @@ interface AlumniData {
 
 export default function Alumni({ alumniData }: any) {
     const { setActiveTab } = useContext(UserContext);
+    
     useEffect(() => {
         setActiveTab('alumni');
     }, [setActiveTab]);
-
-    console.log(alumniData)
 
     return (
         <div className='min-h-screen bg-white'>

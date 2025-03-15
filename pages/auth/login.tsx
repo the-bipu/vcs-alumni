@@ -1,5 +1,6 @@
 import Loader from '@/components/common/Loader';
 import Login from '@/components/common/Login'
+import MiniNav from '@/components/common/MiniNav';
 import { UserContext } from '@/context/userContext';
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react'
@@ -19,6 +20,7 @@ const LoginPage = () => {
     return (
         <>
             {loading && <Loader />}
+            <MiniNav />
             <Login />
         </>
     )
