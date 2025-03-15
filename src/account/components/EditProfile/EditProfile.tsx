@@ -89,7 +89,7 @@ const EditProfile = ({setIsEditing, isEditing}: any) => {
     }
 
     return (
-        <div className='w-full h-auto flex md:flex-row flex-col gap-10 md:items-start items-center justify-start'>
+        <div className='w-full h-auto flex md:flex-row flex-col gap-10 py-20 md:items-start items-center justify-start'>
 
             <div className='min-w-96 flex flex-col gap-4'>
                 {publicId ? (

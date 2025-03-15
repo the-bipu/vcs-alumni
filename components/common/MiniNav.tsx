@@ -12,8 +12,8 @@ const MiniNav = () => {
     };
 
     return (
-        <div className='flex flex-col w-full h-auto shadow'>
-            <div className='w-full h-auto py-4 flex items-center justify-center bg-[#fff] text-[#1a1a1a]'>
+        <div className='flex flex-col w-full h-auto'>
+            <div className='w-full h-auto py-4 flex items-center justify-center bg-[#fff] text-[#1a1a1a] shadow'>
 
                 <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center relative'>
 
@@ -43,7 +43,6 @@ const MiniNav = () => {
                 </div>
 
             </div>
-
         </div>
     )
 }

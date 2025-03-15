@@ -15,7 +15,7 @@ interface UserProfileProps {
 
 const UserProfile: React.FC<UserProfileProps> = ({ setIsEditing, isEditing, userData, formattedDate }) => {
     return (
-        <div className='w-full h-auto flex md:flex-row flex-col gap-10 items-start justify-start'>
+        <div className='w-full h-auto flex md:flex-row flex-col py-20 gap-10 items-start justify-start'>
             <div className='flex flex-col gap-4 md:min-w-96 min-w-full'>
                 <Image
                     src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData?.profile}.png`}
