@@ -1,13 +1,43 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const Loader = () => {
-    useEffect(() => {
-        document.body.style.overflow = "hidden";
-    }, []);
-
     return (
-        <div className='fixed top-0 left-0 w-full h-screen bg-[#212121] flex items-center justify-center'>
-            <div className="loader"></div>
+        <div className='absolute top-0 left-0 bg-[#000000d5] w-full h-screen flex items-center justify-center'>
+            <div className="loader">
+                <div className="contain">
+                    <div className="carousel">
+                        <div className="love"></div>
+                        <div className="love"></div>
+                        <div className="love"></div>
+                        <div className="love"></div>
+                        <div className="love"></div>
+                        <div className="love"></div>
+                        <div className="love"></div>
+                    </div>
+                </div>
+                <div className="contain">
+                    <div className="carousel">
+                        <div className="death"></div>
+                        <div className="death"></div>
+                        <div className="death"></div>
+                        <div className="death"></div>
+                        <div className="death"></div>
+                        <div className="death"></div>
+                        <div className="death"></div>
+                    </div>
+                </div>
+                <div className="contain">
+                    <div className="carousel">
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                        <div className="robots"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
