@@ -56,6 +56,12 @@ export default async function sitemap() {
       frequency: "daily",
     },
     {
+      url: `https://vcs-alumni.vercel.app/admission`,
+      lastModified: new Date().toISOString(),
+      priority: 0.8,
+      frequency: "daily",
+    },
+    {
       url: `https://vcs-alumni.vercel.app/testimonial`,
       lastModified: new Date().toISOString(),
       priority: 0.8,
@@ -65,6 +71,24 @@ export default async function sitemap() {
       url: `https://vcs-alumni.vercel.app/queries`,
       lastModified: new Date().toISOString(),
       priority: 0.8,
+      frequency: "daily",
+    },
+    {
+      url: `https://vcs-alumni.vercel.app/donate`,
+      lastModified: new Date().toISOString(),
+      priority: 0.7,
+      frequency: "daily",
+    },
+    {
+      url: `https://vcs-alumni.vercel.app/terms-of-service`,
+      lastModified: new Date().toISOString(),
+      priority: 0.7,
+      frequency: "daily",
+    },
+    {
+      url: `https://vcs-alumni.vercel.app/privacy-policy`,
+      lastModified: new Date().toISOString(),
+      priority: 0.7,
       frequency: "daily",
     },
   ];

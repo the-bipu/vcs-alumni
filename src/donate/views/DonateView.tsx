@@ -3,6 +3,7 @@ import { UserContext } from '@/context/userContext';
 
 import JoinUs from '@/components/common/JoinUs';
 import HeaderDonate from '../components/HeaderDonate/HeaderDonate';
+import DonationForm from '../components/DonationForm/DonationForm';
 
 const DonateView = () => {
   const { setActiveTab } = useContext(UserContext);
@@ -15,6 +16,8 @@ const DonateView = () => {
     <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
 
       <HeaderDonate />
+
+      <DonationForm />
 
       <JoinUs />
 
