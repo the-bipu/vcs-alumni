@@ -25,7 +25,6 @@ const DonatePage: NextPage = (props) => (
       <meta name="twitter:image" content="/logo/og-vcs.png" />
     </Head>
 
-
     <DonateView />
   </DonateController>
 );
