@@ -29,7 +29,7 @@ const AlumniPage: React.FC<AlumniPageProps> = ({ alumniData }) => {
         <AlumniController alumniData={alumniData}>
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
-                <title>Our Alumni | Vaishali Central School | Connect, Inspire, Grow</title>
+                <title>Our Alumni | Vaishali Central School Alumni | Connect, Inspire, Grow</title>
                 <meta name="description" content="Stay connected with the vibrant alumni network of Vaishali Central School. Celebrate achievements, share experiences, and strengthen lifelong bonds." />
                 <meta name="keywords" content="Vaishali Central School Alumni, alumni network, VCS alumni, school alumni, reconnect, Bihar alumni, alumni association, alumni success stories" />
                 <meta name="author" content="vcs-alumni.vercel.app" />
