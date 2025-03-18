@@ -4,6 +4,7 @@ import { UserContext } from '@/context/userContext';
 import JoinUs from '@/components/common/JoinUs';
 import HeaderDonate from '../components/HeaderDonate/HeaderDonate';
 import DonationForm from '../components/DonationForm/DonationForm';
+import DonationFaqs from '../components/DonationFaqs/DonationFaqs';
 
 const DonateView = () => {
   const { setActiveTab } = useContext(UserContext);
@@ -18,6 +19,8 @@ const DonateView = () => {
       <HeaderDonate />
 
       <DonationForm />
+
+      <DonationFaqs />
 
       <JoinUs />
 
