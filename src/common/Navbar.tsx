@@ -115,21 +115,21 @@ const Navbar = () => {
                         <p className='mb-2 text-[#000] text-lg font-semibold'>Useful Links</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
                             <Link href='/auth/login' onClick={toggleNavbar}>Login & Register</Link>
-                            <Link href='/gallery' onClick={toggleNavbar}>Gallery</Link>
-                            <Link href='/about' onClick={toggleNavbar}>About AA</Link>
-                            <Link href='/events' onClick={toggleNavbar}>Events & Updates</Link>
-                            <Link href='/terms' onClick={toggleNavbar}>Terms & Conditions</Link>
-                            <Link href='/privacy' onClick={toggleNavbar}>Privacy Policy</Link>
+                            <Link href='/academic-records' onClick={toggleNavbar}>Academic Records</Link>
+                            <Link href='/online-resources' onClick={toggleNavbar}>Online Resources</Link>
+                            <Link href='/faculty-and-staffs' onClick={toggleNavbar}>Faculty & Staff</Link>
+                            <Link href='/terms-of-service' onClick={toggleNavbar}>Terms of Service</Link>
+                            <Link href='/privacy-policy' onClick={toggleNavbar}>Privacy Policy</Link>
                         </div>
 
-                        <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Facilities</p>
+                        <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Community</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
-                            <Link href='/facility/classrooms' onClick={toggleNavbar}>Classrooms</Link>
-                            <Link href='/facility/library' onClick={toggleNavbar}>Library</Link>
-                            <Link href='/facility/computer-labs' onClick={toggleNavbar}>Computer Lab</Link>
-                            <Link href='/facility/playground' onClick={toggleNavbar}>Playground</Link>
-                            <Link href='/facility/laboratory' onClick={toggleNavbar}>Laboratory</Link>
-                            <Link href='/facility/seminar-room' onClick={toggleNavbar}>Seminar Room</Link>
+                            <Link href='/alumni' onClick={toggleNavbar}>Our Alumni</Link>
+                            <Link href='/alumni-directory' onClick={toggleNavbar}>Alumni Directory</Link>
+                            <Link href='/success-stories' onClick={toggleNavbar}>Success Stories</Link>
+                            <Link href='/donate' onClick={toggleNavbar}>Donate & Support</Link>
+                            <Link href='/scholarships' onClick={toggleNavbar}>Scholarships</Link>
+                            <Link href='/job-board' onClick={toggleNavbar}>Job Board</Link>
                         </div>
 
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Other Links</p>

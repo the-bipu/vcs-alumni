@@ -48,21 +48,21 @@ const Footer = () => {
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Useful Links</p>
               <Link href='/auth/login' className='font-normal w-52'>Login & Register</Link>
-              <Link href='/' className='font-normal w-52'>Academic Records</Link>
-              <Link href='/' className='font-normal w-52'>Online Resources</Link>
-              <Link href='/' className='font-normal w-52'>Faculty & Staff</Link>
-              <Link href='/terms' className='font-normal w-52'>Terms & Conditions</Link>
-              <Link href='/privacy' className='font-normal w-52'>Privacy Policy</Link>
+              <Link href='/academic-records' className='font-normal w-52'>Academic Records</Link>
+              <Link href='/online-resources' className='font-normal w-52'>Online Resources</Link>
+              <Link href='/faculty-and-staffs' className='font-normal w-52'>Faculty & Staff</Link>
+              <Link href='/terms-of-service' className='font-normal w-52'>Terms of Service</Link>
+              <Link href='/privacy-policy' className='font-normal w-52'>Privacy Policy</Link>
             </div>
 
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Community</p>
               <Link href='/alumni' className='font-normal w-52'>Our Alumni</Link>
-              <Link href='/' className='font-normal w-52'>Alumni Directory</Link>
-              <Link href='/' className='font-normal w-52'>Success Stories</Link>
-              <Link href='/' className='font-normal w-52'>Donate & Support</Link>
-              <Link href='/' className='font-normal w-52'>Scholarships</Link>
-              <Link href='/' className='font-normal w-52'>Job Board</Link>
+              <Link href='/alumni-directory' className='font-normal w-52'>Alumni Directory</Link>
+              <Link href='/success-stories' className='font-normal w-52'>Success Stories</Link>
+              <Link href='/donate' className='font-normal w-52'>Donate & Support</Link>
+              <Link href='/scholarships' className='font-normal w-52'>Scholarships</Link>
+              <Link href='/job-board' className='font-normal w-52'>Job Board</Link>
             </div>
 
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
