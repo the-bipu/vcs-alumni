@@ -1,119 +1,35 @@
-import JoinUs from '@/components/common/JoinUs'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
+import Head from 'next/head';
 
-const JobBoard = () => {
-    return (
-        <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
+import type { NextPage } from 'next';
+import { JobsController } from '@/src/jobs/controller/JobsController';
+import JobsView from '@/src/jobs/views/JobsView';
 
-            <div className='w-full h-auto flex items-center justify-center relative'>
-                <Image src={'/bg/header-vcs.png'} alt='page header vcs' width={550} height={550} priority={true} className='w-full h-64 object-cover' />
-                <div className='absolute flex flex-col gap-2 items-center justify-center text-black text-center'>
-                    <div className='md:text-4xl text-3xl font-bold text-[#353535]'>Job Board</div>
-                    <div className='text-lg font-medium'>Find jobs with referral of your alumni.</div>
-                </div>
-            </div>
+const JobsPage: NextPage = (props) => (
+    <div>
+        <JobsController {...props}>
+            <Head>
+                <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
+                <title>Job Board | Vaishali Central School Alumni | Find Opportunities, Build Your Career</title>
+                <meta name="google-site-verification" content="IglenbFjY-IMapS880ujO1AWTLZ-PZjAe8uWRYU-hjE" />
+                <meta name="description" content="Explore job opportunities, internships, and career resources exclusively for Vaishali Central School alumni. Kickstart your career today!" />
+                <meta name="keywords" content="Vaishali Central School Jobs, alumni job board, career opportunities, internships, VCS job listings, Bihar jobs" />
+                <meta name="author" content="vcs-alumni.vercel.app" />
 
-            <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-24 pt-12 pb-24 text-black'>
+                <meta property="og:title" content="Vaishali Central School Job Board | Find Opportunities, Build Your Career" />
+                <meta property="og:description" content="Browse job openings and career opportunities tailored for Vaishali Central School alumni. Connect with employers and grow your career." />
+                <meta property="og:image" content="/logo/job-board-og.png" />
+                <meta property="og:url" content="https://vcs-alumni.vercel.app/job-board" />
 
-                <div className='w-full flex flex-col gap-6'>
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Data Entry Operator</div>
-                            <div className='font-normal'>MS Excel, Typing, Basic Computer Skills</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Vaishali Central School Job Board | Find Opportunities, Build Your Career" />
+                <meta name="twitter:description" content="Find the latest job listings, career resources, and internship programs exclusively for Vaishali Central School alumni." />
+                <meta name="twitter:image" content="/logo/job-board-og.png" />
+            </Head>
 
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Retail Sales Associate</div>
-                            <div className='font-normal'>Customer Service, Billing, Stock Management</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
+            <JobsView />
+        </JobsController>
+    </div>
+);
 
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Delivery Executive</div>
-                            <div className='font-normal'>Logistics, Navigation, Customer Handling</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Call Center Representative</div>
-                            <div className='font-normal'>Communication, Customer Support, Problem-Solving</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Electrician Assistant</div>
-                            <div className='font-normal'>Basic Electrical Work, Wiring, Safety Knowledge</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Field Technician</div>
-                            <div className='font-normal'>Device Installation, Troubleshooting, Maintenance</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Housekeeping Staff</div>
-                            <div className='font-normal'>Cleaning, Maintenance, Organization</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-
-                    <div className='w-full flex flex-row p-8 items-center justify-between text-center serviceCard'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-blue-600 font-normal'>Connect</div>
-                            <div className='text-2xl font-semibold'>Security Guard</div>
-                            <div className='font-normal'>Surveillance, Patrolling, Safety Procedures</div>
-                        </div>
-                        <div className='w-auto h-auto flex items-center justify-center'>
-                            <Button variant={'default'}>Apply Now</Button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <JoinUs />
-
-        </div>
-    )
-}
-
-export default JobBoard
+export default JobsPage;
