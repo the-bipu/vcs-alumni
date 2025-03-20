@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '@/src/common/Navbar';
+import Footer from '@/src/common/Footer';
 
 const FacultyController = (props?: any) => {
     const {
@@ -26,6 +27,7 @@ const FacultyController = (props?: any) => {
         <div>
             <Navbar />
             {childrenWithProps}
+            <Footer />
         </div>
     );
 };
