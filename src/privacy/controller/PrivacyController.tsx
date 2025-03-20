@@ -1,5 +1,5 @@
+import MiniNav from '@/components/common/MiniNav';
 import React, { useState } from 'react';
-import Navbar from '@/src/common/Navbar';
 
 const PrivacyController = (props?: any) => {
     const {
@@ -24,7 +24,7 @@ const PrivacyController = (props?: any) => {
 
     return (
         <div>
-            <Navbar />
+            <MiniNav />
             {childrenWithProps}
         </div>
     );

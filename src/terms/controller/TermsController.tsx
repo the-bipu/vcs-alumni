@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '@/src/common/Navbar';
+import MiniNav from '@/components/common/MiniNav';
 
 const TermsController = (props?: any) => {
     const {
@@ -24,7 +24,7 @@ const TermsController = (props?: any) => {
 
     return (
         <div>
-            <Navbar />
+            <MiniNav />
             {childrenWithProps}
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '@/src/common/Navbar';
+import Footer from '@/src/common/Footer';
 
 const ResourcesController = (props?: any) => {
     const {
@@ -26,6 +27,7 @@ const ResourcesController = (props?: any) => {
         <div>
             <Navbar />
             {childrenWithProps}
+            <Footer />
         </div>
     );
 };

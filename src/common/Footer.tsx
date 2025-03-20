@@ -50,7 +50,7 @@ const Footer = () => {
               <Link href='/auth/login' className='font-normal w-52'>Login & Register</Link>
               <Link href='/academic-records' className='font-normal w-52'>Academic Records</Link>
               <Link href='/online-resources' className='font-normal w-52'>Online Resources</Link>
-              <Link href='/faculty-and-staffs' className='font-normal w-52'>Faculty & Staff</Link>
+              <Link href='/faculty-staffs' className='font-normal w-52'>Faculty & Staff</Link>
               <Link href='/terms-of-service' className='font-normal w-52'>Terms of Service</Link>
               <Link href='/privacy-policy' className='font-normal w-52'>Privacy Policy</Link>
             </div>

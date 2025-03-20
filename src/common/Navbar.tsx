@@ -117,7 +117,7 @@ const Navbar = () => {
                             <Link href='/auth/login' onClick={toggleNavbar}>Login & Register</Link>
                             <Link href='/academic-records' onClick={toggleNavbar}>Academic Records</Link>
                             <Link href='/online-resources' onClick={toggleNavbar}>Online Resources</Link>
-                            <Link href='/faculty-and-staffs' onClick={toggleNavbar}>Faculty & Staff</Link>
+                            <Link href='/faculty-staffs' onClick={toggleNavbar}>Faculty & Staff</Link>
                             <Link href='/terms-of-service' onClick={toggleNavbar}>Terms of Service</Link>
                             <Link href='/privacy-policy' onClick={toggleNavbar}>Privacy Policy</Link>
                         </div>
