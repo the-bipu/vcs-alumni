@@ -3,6 +3,7 @@ import { UserContext } from '@/context/userContext';
 
 import JoinUs from '@/components/common/JoinUs';
 import Developers from '../components/Developers';
+import TechUsed from '../components/TechUsed';
 
 const DeveloperView = () => {
   const { setActiveTab } = useContext(UserContext);
@@ -12,9 +13,11 @@ const DeveloperView = () => {
   }, [setActiveTab]);
 
   return (
-    <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
+    <div className='w-full h-auto min-h-screen bg-white flex flex-col items-center justify-center'>
 
       <Developers />
+
+      <TechUsed />
 
       <JoinUs />
 

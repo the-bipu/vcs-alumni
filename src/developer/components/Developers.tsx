@@ -5,7 +5,7 @@ import React from 'react'
 
 const Developers = () => {
     return (
-        <div className='flex w-full h-auto items-center justify-center py-20 border-b border-b-[#acacac]'>
+        <div className='flex w-full h-auto items-center justify-center py-20'>
             <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
                 <div className='w-full h-auto flex flex-col items-start gap-2'>
                     <h1 className='md:text-4xl text-xl font-bold text-[#353535]'>Website Team</h1>
