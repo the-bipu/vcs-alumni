@@ -58,7 +58,7 @@ const Footer = () => {
             <div className='flex flex-col gap-2 items-start justify-center w-auto text-sm text-[#77838F]'>
               <p className='mb-2 text-[#fff] text-base font-semibold'>Community</p>
               <Link href='/alumni' className='font-normal w-52'>Our Alumni</Link>
-              <Link href='/alumni-directory' className='font-normal w-52'>Alumni Directory</Link>
+              <Link href='/chapters' className='font-normal w-52'>Chapters</Link>
               <Link href='/success-stories' className='font-normal w-52'>Success Stories</Link>
               <Link href='/donate' className='font-normal w-52'>Donate & Support</Link>
               <Link href='/scholarships' className='font-normal w-52'>Scholarships</Link>

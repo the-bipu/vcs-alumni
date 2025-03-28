@@ -125,7 +125,7 @@ const Navbar = () => {
                         <p className='mb-2 mt-6 text-[#000] text-lg font-semibold'>Community</p>
                         <div className='flex md:flex-row flex-col w-full md:gap-12 gap-2 py-3 text-base font-normal uppercase transition-all border-y border-y-[#acacac]'>
                             <Link href='/alumni' onClick={toggleNavbar}>Our Alumni</Link>
-                            <Link href='/alumni-directory' onClick={toggleNavbar}>Alumni Directory</Link>
+                            <Link href='/chapters' onClick={toggleNavbar}>Chapters</Link>
                             <Link href='/success-stories' onClick={toggleNavbar}>Success Stories</Link>
                             <Link href='/donate' onClick={toggleNavbar}>Donate & Support</Link>
                             <Link href='/scholarships' onClick={toggleNavbar}>Scholarships</Link>
