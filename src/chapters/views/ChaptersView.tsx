@@ -2,19 +2,19 @@ import React, { useContext, useEffect } from 'react';
 import { UserContext } from '@/context/userContext';
 
 import JoinUs from '@/components/common/JoinUs';
-import AlumniDirPage from '../components/AlumniDirPage';
+import Chapters from '../components/Chapters';
 
-const AlumniDirView = ({ alumniData }: any) => {
+const ChaptersView = () => {
   const { setActiveTab } = useContext(UserContext);
 
   useEffect(() => {
-    setActiveTab('alumnidir');
+    setActiveTab('chapters');
   }, [setActiveTab]);
 
   return (
     <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
 
-      <AlumniDirPage alumniData={alumniData} />
+      <Chapters />
       
       <JoinUs />
 
@@ -22,4 +22,4 @@ const AlumniDirView = ({ alumniData }: any) => {
   )
 }
 
-export default AlumniDirView;
+export default ChaptersView;

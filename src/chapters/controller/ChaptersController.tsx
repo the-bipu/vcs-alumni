@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '@/src/common/Footer';
 import Navbar from '@/src/common/Navbar';
 
-const AlumniDirController = (props?: any) => {
+const ChaptersController = (props?: any) => {
     const {
         children,
         ...rest
@@ -32,4 +32,4 @@ const AlumniDirController = (props?: any) => {
     );
 };
 
-export { AlumniDirController };
+export { ChaptersController };
