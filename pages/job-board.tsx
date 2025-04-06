@@ -18,13 +18,13 @@ const JobsPage: NextPage = (props) => (
 
                 <meta property="og:title" content="Vaishali Central School Job Board | Find Opportunities, Build Your Career" />
                 <meta property="og:description" content="Browse job openings and career opportunities tailored for Vaishali Central School alumni. Connect with employers and grow your career." />
-                <meta property="og:image" content="/logo/job-board-og.png" />
+                <meta property="og:image" content="/logo/og-vcs.png" />
                 <meta property="og:url" content="https://vcs-alumni.vercel.app/job-board" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Vaishali Central School Job Board | Find Opportunities, Build Your Career" />
                 <meta name="twitter:description" content="Find the latest job listings, career resources, and internship programs exclusively for Vaishali Central School alumni." />
-                <meta name="twitter:image" content="/logo/job-board-og.png" />
+                <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
             <JobsView />
