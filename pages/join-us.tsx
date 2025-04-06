@@ -32,17 +32,13 @@ const JoinUs = () => {
 
             <MiniNav />
 
-            <div className='flex w-full h-auto items-center justify-center py-20'>
-                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-8'>
-                    <div className='md:w-1/2 w-full h-auto flex flex-col items-start justify-between'>
-                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Join Us Today !!</h2>
+            <div className='flex flex-col gap-16 w-full h-auto items-center justify-center py-20'>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Login with Google</h2>
                         <div className='text-justify text-black mb-4'>
-                            Joining the Vaishali Central School Alumni Association isn’t just about reconnecting with old friends—it’s about celebrating a shared legacy and shaping the future together. As an alumnus, you are part of a vibrant network of achievers, dreamers, and change-makers.
-
-                            <br />
-                            <br />
-
-                            Stay connected, inspire the next generation, and keep the Vaishali Central School spirit alive. Your journey with VCS didn’t end at graduation—it’s a lifelong bond. Join us today and be a part of something bigger! 🚀🎓
+                            To begin, simply head over to our Login Page and sign in using your Google account. This ensures secure and fast access without the need to remember another password.
                         </div>
                         <Link href={'/auth/login'}>
                             <Button variant={'rounded'} className='text-base'>
@@ -54,6 +50,90 @@ const JoinUs = () => {
                         <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
                     </div>
                 </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row-reverse flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Redirect to Account Page</h2>
+                        <div className='text-justify text-black mb-4'>
+                            Once logged in, you'll be automatically redirected to the Account Page. This is where your journey officially starts.
+                        </div>
+                        <Link href={'/account'}>
+                            <Button variant={'rounded'} className='text-base'>
+                                Account <FaTeamspeak />
+                            </Button>
+                        </Link>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Complete Your Profile</h2>
+                        <div className='text-justify text-black mb-4'>
+                            On the account page, you’ll be prompted to fill in your personal and academic details. Make sure to provide accurate and up-to-date information to help us verify your identity and background.
+                        </div>
+                        <Link href={'/account'}>
+                            <Button variant={'rounded'} className='text-base'>
+                                Account <FaTeamspeak />
+                            </Button>
+                        </Link>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row-reverse flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Choose Your Account Visibility</h2>
+                        <div className='text-justify text-black mb-4'>
+                            You can decide whether your profile will be Public (visible to other alumni) or Private (only visible to admins). This setting can be adjusted later from your profile settings as well.
+                        </div>
+                        <Button variant={'rounded'} className='text-base'>
+                            Private / Public
+                        </Button>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Admin Review & Verification</h2>
+                        <div className='text-justify text-black mb-4'>
+                            After submitting your information, our admin team will review your profile and verify your details. This step is essential to maintain the authenticity and quality of our alumni network.
+                        </div>
+                        <Button variant={'rounded'} className='text-base'>
+                            Verification
+                        </Button>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row-reverse flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Approval & Welcome Notice</h2>
+                        <div className='text-justify text-black mb-4'>
+                            If your submitted details pass the verification process, a Welcome Notice will be uploaded on the platform confirming your membership in the alumni community.
+                        </div>
+                        <Button variant={'rounded'} className='text-base'>
+                            Approval & Welcome
+                        </Button>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='connect' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
+                <div className='md:w-10/12 w-11/12 border-l-2 border-l-black pl-4 text-justify text-black'>
+                    Note: If the background verification reveals incorrect, incomplete, or suspicious information, your account will be removed, and the associated email address will be permanently blocked from accessing the portal in the future. Please ensure that all data entered is genuine and accurate.
+                </div>
+
             </div>
 
             <Footer />
