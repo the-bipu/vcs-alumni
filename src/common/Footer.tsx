@@ -86,7 +86,7 @@ const Footer = () => {
               <div className='text-[#77838F]'>
                 <div className='text-lg font-light mb-4'>
                   Call us <br />
-                  <span className='text-[#1967d2] text-2xl font-bold'>+91 XXXXX XXXXX</span>
+                  <span className='text-[#1967d2] text-2xl font-bold'>+91 99349 36302</span>
                 </div>
               </div>
             </div>

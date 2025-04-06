@@ -1,6 +1,8 @@
 import MiniNav from '@/components/common/MiniNav'
+import { Button } from '@/components/ui/button'
 import Footer from '@/src/common/Footer'
 import Head from 'next/head'
+import Image from 'next/image'
 import React from 'react'
 
 const Scholarships = () => {
@@ -27,8 +29,23 @@ const Scholarships = () => {
 
             <MiniNav />
 
-            <div>
-                Scholarships
+            <div className='flex flex-col gap-16 w-full h-auto items-center justify-center py-20'>
+
+                <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-center justify-center gap-16'>
+                    <div className='md:w-1/2 w-full h-auto flex flex-col gap-3 items-start justify-between'>
+                        <h2 className='md:text-4xl text-3xl font-bold text-[#353535] md:mb-2 mb-4'>Scholarships Coming Soon</h2>
+                        <div className='text-justify text-black mb-4'>
+                            We’re working on bringing scholarship opportunities exclusively for Vaishali Central School students and alumni. These scholarships will be aimed at supporting your academic journey and recognizing your achievements. Stay tuned—details will be posted here soon!
+                        </div>
+                        <Button variant={'rounded'} className='text-base' disabled>
+                            Stay Tuned
+                        </Button>
+                    </div>
+                    <div className='md:w-1/2 w-full h-auto flex items-center justify-center'>
+                        <Image src={'/connect/join-us.jpg'} alt='scholarships' width={550} height={550} priority={true} className='shadow-md w-full h-96 object-cover rounded-md' />
+                    </div>
+                </div>
+
             </div>
 
             <Footer />
