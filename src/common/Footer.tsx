@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className='md:w-96 w-full flex flex-col gap-2'>
               <div className=' font-light text-sm uppercase'>Join the force today by clicking here.</div>
-              <button className='w-full h-12 transition-all border bg-transparent hover:border-[#1967d2] hover:bg-[#1967d2] flex items-center justify-start pl-8' onClick={() => router.push('/')}>
+              <button className='w-full h-12 transition-all border bg-transparent hover:border-[#1967d2] hover:bg-[#1967d2] flex items-center justify-start pl-8' onClick={() => router.push('/contact')}>
                 Contact Us!
               </button>
             </div>

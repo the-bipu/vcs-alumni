@@ -16,13 +16,13 @@ const GuidancePage: NextPage = (props) => (
 
             <meta property="og:title" content="Career Guidance | Vaishali Central School Alumni" />
             <meta property="og:description" content="Explore career opportunities, mentorship programs, and expert guidance from successful Vaishali Central School alumni." />
-            <meta property="og:image" content="/logo/og-career.png" />
+            <meta property="og:image" content="/logo/og-vcs.png" />
             <meta property="og:url" content="https://vcs-alumni.vercel.app/guidance" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Career Guidance | Vaishali Central School Alumni" />
             <meta name="twitter:description" content="Connect with experienced alumni for career guidance, industry insights, and mentorship to shape your professional journey." />
-            <meta name="twitter:image" content="/logo/og-career.png" />
+            <meta name="twitter:image" content="/logo/og-vcs.png" />
         </Head>
 
         <GuidanceView />

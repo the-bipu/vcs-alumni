@@ -10,7 +10,7 @@ import Head from 'next/head';
 
 const JoinUs = () => {
     return (
-        <div>
+        <div className='flex flex-col w-full h-auto'>
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
                 <title>Join Us | Vaishali Central School Alumni | Connect, Collaborate, Grow</title>
