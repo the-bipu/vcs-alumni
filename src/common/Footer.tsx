@@ -17,7 +17,7 @@ const Footer = () => {
 
           <div className='flex md:flex-row flex-col justify-between md:items-center items-start md:mb-0 mb-4'>
             <div className='flex flex-col items-start justify-between py-12'>
-              <div className='text-xl font-normal w-full'>Alumni Association</div>
+              <div className='text-xl font-semibold w-full italic'>Alumni Association</div>
               <div className='md:text-3xl text-2xl font-semibold w-full'>Vaishali Central School</div>
               <div className='text-base font-light'>
                 Mahnar Road, Rajason<br />
@@ -27,8 +27,8 @@ const Footer = () => {
             </div>
             <div className='md:w-96 w-full flex flex-col gap-2'>
               <div className=' font-light text-sm uppercase'>Join the force today by clicking here.</div>
-              <button className='w-full h-12 transition-all border bg-transparent hover:border-[#1967d2] hover:bg-[#1967d2] flex items-center justify-start pl-8' onClick={() => router.push('/contact')}>
-                Contact Us!
+              <button className='w-full h-12 transition-all border bg-transparent hover:border-[#1967d2] hover:bg-[#1967d2] flex items-center justify-start pl-8' onClick={() => router.push('/join-us')}>
+                Join Us!
               </button>
             </div>
           </div>

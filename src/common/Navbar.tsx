@@ -98,8 +98,8 @@ const Navbar = () => {
                                 <div className={activeTab === 'account' ? 'text-blue-700' : ''}>Account</div>
                             </Link>
                         ) : (
-                            <Link href='/auth/login' onClick={toggleNavbar}>
-                                <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
+                            <Link href='/join-us' onClick={toggleNavbar}>
+                                <div className={activeTab === 'join' ? 'text-blue-700' : ''}>Join Us</div>
                             </Link>
                         )}
                         <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>
@@ -172,8 +172,8 @@ const Navbar = () => {
                             <div className={activeTab === 'account' ? 'text-blue-700' : ''}>Account</div>
                         </Link>
                     ) : (
-                        <Link href='/auth/login'>
-                            <div className={activeTab === 'login' ? 'text-blue-700' : ''}>Login</div>
+                        <Link href='/join-us' onClick={toggleNavbar}>
+                            <div className={activeTab === 'join' ? 'text-blue-700' : ''}>Join Us</div>
                         </Link>
                     )}
                     <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>
