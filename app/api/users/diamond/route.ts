@@ -2,14 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectMongo from '@/utils/mongodb.js';
 import { User } from '@/models/User.js';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         await connectMongo();
 
-        const alumni = await User.find({ joiningYear: "2008" });
+        const alumni = await User.find({ userType: "alumni", verified: true });
 
         if (!alumni.length) {
-            return NextResponse.json({ message: 'No alumni found for joiningYear 2008' }, { status: 404 });
+            return NextResponse.json({ message: 'No verified alumni found' }, { status: 404 });
         }
 
         return NextResponse.json(alumni, { status: 200 });

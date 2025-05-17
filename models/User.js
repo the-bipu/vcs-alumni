@@ -47,6 +47,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "alumni",
     },
+    verified: {
+      type: Boolean,
+      default: false,
+    },
     accountType: {
       type: String,
       default: "private",

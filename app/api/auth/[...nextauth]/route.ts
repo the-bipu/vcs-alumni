@@ -54,6 +54,7 @@ const authOptions: any = {
                     if (!existingUser) {
                         const newUser = new User({
                             email: user.email,
+                            fullName: user.name
                         });
 
                         await newUser.save();
