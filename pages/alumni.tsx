@@ -1,32 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 
-import type { GetServerSideProps, NextPage } from 'next';
 import { AlumniController } from '@/src/alumni/controller/AlumniController';
 import AlumniView from '@/src/alumni/views/AlumniView';
 
-interface AlumniData {
-    email: string;
-    phone: string;
-    fullName: string;
-    profile: string;
-    gender: string;
-    bio: string;
-    dob: string;
-    joiningYear: string;
-    passingYear: string;
-    userType: string;
-    accountType: string;
-    position: string;
-}
-
-interface AlumniPageProps {
-    alumniData: AlumniData[];
-}
-
-const AlumniPage: React.FC<AlumniPageProps> = ({ alumniData }) => {
+const AlumniPage = () => {
     return (
-        <AlumniController alumniData={alumniData}>
+        <AlumniController>
             <Head>
                 <link rel="icon" href="/favicon.ico" type="image/ico" sizes="70x70" />
                 <title>Our Alumni | Vaishali Central School Alumni | Connect, Inspire, Grow</title>
@@ -45,18 +25,9 @@ const AlumniPage: React.FC<AlumniPageProps> = ({ alumniData }) => {
                 <meta name="twitter:image" content="/logo/og-vcs.png" />
             </Head>
 
-            <AlumniView alumniData={alumniData} />
+            <AlumniView />
         </AlumniController>
     );
 };
 
 export default AlumniPage;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_MAIN_ROUTE}/api/users/diamond`);
-    const alumniData: AlumniData[] = await res.json();
-
-    return {
-        props: { alumniData },
-    };
-};

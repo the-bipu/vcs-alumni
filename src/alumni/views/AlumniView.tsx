@@ -4,7 +4,7 @@ import { UserContext } from '@/context/userContext';
 import JoinUs from '@/components/common/JoinUs';
 import AlumniPage from '../components/AlumniPage';
 
-const AlumniView = ({alumniData}: any) => {
+const AlumniView = () => {
   const { setActiveTab } = useContext(UserContext);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const AlumniView = ({alumniData}: any) => {
   return (
     <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
 
-      <AlumniPage alumniData={alumniData} />
+      <AlumniPage />
       
       <JoinUs />
 
