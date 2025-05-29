@@ -21,7 +21,7 @@ import { CldImage, CldUploadWidget } from 'next-cloudinary';
 import { FaUpload } from 'react-icons/fa';
 import { formSchema } from '../../schema/formSchema';
 
-const EditProfile = ({setIsEditing, isEditing}: any) => {
+const EditProfile = ({ setIsEditing, isEditing }: any) => {
     const router = useRouter();
     const [publicId, setPublicId] = useState("");
 
@@ -89,56 +89,43 @@ const EditProfile = ({setIsEditing, isEditing}: any) => {
     }
 
     return (
-        <div className='w-full h-auto flex md:flex-row flex-col gap-10 py-20 md:items-start items-center justify-start'>
+        <div className='w-full h-auto flex flex-col items-start justify-start bg-white shadowBorder rounded p-4'>
+            <div className='flex flex-col w-full gap-4'>
 
-            <div className='min-w-96 flex flex-col gap-4'>
-                {publicId ? (
-                    <CldImage src={publicId} alt={publicId} width={384} height={384} />
-                ) : (
-                    <Image
-                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData?.profile}.png`}
-                        alt='profile'
-                        width={384}
-                        height={384}
-                        priority={true}
-                        className='w-96 h-96 object-cover border-4 border-white shadow'
-                    />
-                )}
-                <CldUploadWidget uploadPreset="r79meffi" onSuccess={({ event, info }) => {
-                    if (event === 'success' && typeof info === "object" && info !== null) {
-                        setPublicId(info?.public_id);
-                    }
-                }}>
-                    {({ open }) => {
-                        return (
-                            <Button onClick={() => open()}>
-                                <FaUpload /> Upload an Image
-                            </Button>
-                        );
-                    }}
-                </CldUploadWidget>
-            </div>
-
-            <div className='flex flex-col w-full'>
-                <div className='flex w-full flex-row items-center justify-between mb-4'>
-                    <h2 className='md:text-4xl text-xl font-bold text-[#353535]'>Update Account</h2>
-                    <CrossIcon onClick={() => setIsEditing(!isEditing)} className='cursor-pointer rotate-45' />
+                <div className='flex w-full flex-row items-center justify-between border-b border-b-[#acacac] pb-3'>
+                    <h2 className='md:text-lg text-base font-semibold text-[#353535] px-3'>Edit Profile</h2>
                 </div>
 
-                <div className='w-full flex flex-row flex-wrap items-center justify-between md:gap-0 gap-4'>
-                    <div className='flex flex-col gap-2 md:w-[49%] w-full'>
-                        <Label className='text-base'>Email</Label>
-                        <Input defaultValue={userData?.email} disabled />
-                    </div>
-
-                    <div className='flex flex-col gap-2 md:w-[49%] w-full'>
-                        <Label className='text-base'>User Type</Label>
-                        <Input defaultValue={userData?.userType} className='capitalize' disabled />
-                    </div>
+                <div className='min-w-64 flex flex-col gap-4 mb-4'>
+                    {publicId ? (
+                        <CldImage src={publicId} alt={publicId} width={384} height={384} />
+                    ) : (
+                        <Image
+                            src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData?.profile}.png`}
+                            alt='profile'
+                            width={384}
+                            height={384}
+                            priority={true}
+                            className='w-64 h-64 object-cover border-4 border-white shadow'
+                        />
+                    )}
+                    <CldUploadWidget uploadPreset="r79meffi" onSuccess={({ event, info }) => {
+                        if (event === 'success' && typeof info === "object" && info !== null) {
+                            setPublicId(info?.public_id);
+                        }
+                    }}>
+                        {({ open }) => {
+                            return (
+                                <Button onClick={() => open()} className='w-64'>
+                                    <FaUpload /> Upload an Image
+                                </Button>
+                            );
+                        }}
+                    </CldUploadWidget>
                 </div>
 
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 
                         <div className='w-full flex flex-row flex-wrap items-center justify-between md:gap-0 gap-4'>
                             <FormField
@@ -180,7 +167,7 @@ const EditProfile = ({setIsEditing, isEditing}: any) => {
                             control={form.control}
                             name="profile"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className='hidden'>
                                     <FormLabel>Profile Picture</FormLabel>
                                     <FormControl>
                                         <Input placeholder="Upload your image..." {...field} />
