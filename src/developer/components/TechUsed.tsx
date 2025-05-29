@@ -3,7 +3,7 @@ import React from 'react';
 
 const TechUsed = () => {
     return (
-        <div className='flex w-full h-auto items-center justify-center py-20 border-b border-b-[#acacac] bg-[#eaeaea]'>
+        <div className='flex w-full h-auto items-center justify-center py-20 bg-[#eaeaea]'>
             <div className='md:w-10/12 w-11/12 h-auto flex flex-col items-center justify-center gap-8'>
 
                 <div className='w-full h-auto flex flex-col items-start gap-2'>
@@ -31,7 +31,7 @@ export default TechUsed
 const toolsData = [
     {
         alt: "React Logo",
-        image: "/tech-used/Reach.svg",
+        image: "/tech-used/React.svg",
     },
     {
         alt: "Next.js Logo",
