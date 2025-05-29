@@ -13,7 +13,7 @@ const QueriesView = () => {
   }, [setActiveTab]);
 
   return (
-    <div className='w-full h-auto min-h-screen bg-white flex flex-col gap-6 items-center justify-center border-b border-b-[#acacac]'>
+    <div className='w-full h-auto min-h-screen bg-white flex flex-col items-center justify-center border-b border-b-[#acacac]'>
 
       <HeaderQueries />
 
