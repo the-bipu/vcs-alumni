@@ -67,35 +67,9 @@ const AdminView = () => {
       ) : (
         <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start relative bg-[#dddddd] overflow-hidden`}>
 
-          <div className='w-full h-64 bg-blue-600 text-3xl font-semibold text-white flex items-center justify-center relative'>
-            <div className='w-10/12 h-auto flex flex-row items-center justify-between top-10'>
-
-              <div className='md:hidden flex text-base font-light transition-all bg-black hover:bg-black/70 text-white border-2 border-black hover:border-black/70 cursor-pointer rounded px-3 py-1' onClick={() => setNavOpen(!navOpen)}>
-                {navOpen ? (
-                  <Cross1Icon className='h-6' />
-                ) : (
-                  <HamburgerMenuIcon className='h-6' />
-                )}
-              </div>
-
-              <Link href='/' className='text-base font-light transition-all bg-black hover:bg-black/70 text-white border-2 border-black hover:border-black/70 cursor-pointer rounded px-3 py-1'>
-                <span className='md:flex hidden'>Back to Home</span>
-                <span className='md:hidden flex'>
-                  <ExitIcon className='h-6' />
-                </span>
-              </Link>
-
-            </div>
-
-          </div>
-
-          <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-start justify-center gap-6 mb-10'>
+          <div className='w-full h-auto flex md:flex-row flex-col items-start justify-center'>
 
             <div className='w-96 md:flex hidden flex-col h-auto bg-white shadowBorder rounded'>
-
-              <div className='w-full h-full relative overflow-hidden'>
-                <Image src={userData?.profile ? `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_URL}${userData.profile}.png` : '/home/members/avatar.png'} alt='profile' width={384} height={384} priority={true} className='md:w-96 w-80 md:h-72 h-80 object-cover border-4 border-white rounded' />
-              </div>
 
               <div className='flex flex-col pb-4'>
 
