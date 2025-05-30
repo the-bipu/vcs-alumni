@@ -65,57 +65,54 @@ const AdminView = () => {
       ) : !authenticated ? (
         <WrongSession />
       ) : (
-        <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start relative bg-[#dddddd] overflow-hidden`}>
+        <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start relative overflow-hidden`}>
 
           <div className='w-full h-auto flex md:flex-row flex-col items-start justify-center'>
 
-            <div className='w-96 md:flex hidden flex-col h-auto bg-white shadowBorder rounded'>
+            <div className='w-96 md:flex hidden flex-col h-screen border-r border-r-[#acacac]'>
 
-              <div className='flex flex-col pb-4'>
-
-                <div onClick={() => setCurrentTab('accountDetail')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'accountDetail' && 'bg-[#2d5fa6] text-white'}`}>
-                  <AvatarIcon className='w-6 h-6' />
-                  <span>Account Details</span>
-                </div>
-
-                <div onClick={() => setCurrentTab('editAccount')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'editAccount' && 'bg-[#2d5fa6] text-white'}`}>
-                  <Pencil2Icon className='w-6 h-6' />
-                  <span>Edit Details</span>
-                </div>
-
-                <div onClick={() => setCurrentTab('membership')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'membership' && 'bg-[#2d5fa6] text-white'}`}>
-                  <BadgeIcon className='w-6 h-6' />
-                  <span>Membership</span>
-                </div>
-
-                <div onClick={() => setCurrentTab('password')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'password' && 'bg-[#2d5fa6] text-white'}`}>
-                  <LockClosedIcon className='w-6 h-6' />
-                  <span>Password</span>
-                </div>
-
-                <div onClick={() => setCurrentTab('services')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'services' && 'bg-[#2d5fa6] text-white'}`}>
-                  <Phone className='w-6 h-6' />
-                  <span>Request Service</span>
-                </div>
-
-                <div onClick={() => setCurrentTab('referral')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'referral' && 'bg-[#2d5fa6] text-white'}`}>
-                  <RocketIcon className='w-6 h-6' />
-                  <span>Feedback</span>
-                </div>
-
-                <div className='mt-10 flex flex-col gap-4 px-4'>
-                  <Button onClick={logOutSession} className='px-4 flex flex-row text-base gap-2 items-center justify-start cursor-pointer'>
-                    <ExitIcon className='min-w-6 min-h-6' />
-                    <span>Signout</span>
-                  </Button>
-
-                  <div className='flex flex-col w-full py-3 px-2'>
-                    <span className='text-sm'>You're logged in as</span>
-                    <span className='font-bold uppercase text-[#3b3b3b] cursor-pointer'>{userData?.email}</span>
-                  </div>
-                </div>
-
+              <div onClick={() => setCurrentTab('accountDetail')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'accountDetail' && 'bg-[#2d5fa6] text-white'}`}>
+                <AvatarIcon className='w-6 h-6' />
+                <span>Account Details</span>
               </div>
+
+              <div onClick={() => setCurrentTab('editAccount')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'editAccount' && 'bg-[#2d5fa6] text-white'}`}>
+                <Pencil2Icon className='w-6 h-6' />
+                <span>Edit Details</span>
+              </div>
+
+              <div onClick={() => setCurrentTab('membership')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'membership' && 'bg-[#2d5fa6] text-white'}`}>
+                <BadgeIcon className='w-6 h-6' />
+                <span>Membership</span>
+              </div>
+
+              <div onClick={() => setCurrentTab('password')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'password' && 'bg-[#2d5fa6] text-white'}`}>
+                <LockClosedIcon className='w-6 h-6' />
+                <span>Password</span>
+              </div>
+
+              <div onClick={() => setCurrentTab('services')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'services' && 'bg-[#2d5fa6] text-white'}`}>
+                <Phone className='w-6 h-6' />
+                <span>Request Service</span>
+              </div>
+
+              <div onClick={() => setCurrentTab('referral')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'referral' && 'bg-[#2d5fa6] text-white'}`}>
+                <RocketIcon className='w-6 h-6' />
+                <span>Feedback</span>
+              </div>
+
+              <div className='mt-10 flex flex-col gap-4 px-4'>
+                <Button onClick={logOutSession} className='px-4 flex flex-row text-base gap-2 items-center justify-start cursor-pointer'>
+                  <ExitIcon className='min-w-6 min-h-6' />
+                  <span>Signout</span>
+                </Button>
+
+                <div className='flex flex-col w-full py-3 px-2'>
+                  <span className='text-sm'>You're logged in as</span>
+                  <span className='font-bold uppercase text-[#3b3b3b] cursor-pointer'>{userData?.email}</span>
+                </div>
+              </div>
+
             </div>
 
             <div className={`fixed top-0 ${navOpen ? 'right-0' : '-right-72'} z-50 md:hidden flex flex-col w-72 h-screen bg-white shadowBorder rounded`}>
