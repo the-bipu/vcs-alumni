@@ -32,13 +32,11 @@ const formSchema = z.object({
         .optional(),
 
     instagram: z.string()
-        .url({ message: "Instagram must be a valid URL." })
-        .startsWith("https://", { message: "Instagram link must start with https://." })
+        .trim()
         .optional(),
 
     linkedIn: z.string()
-        .url({ message: "LinkedIn must be a valid URL." })
-        .startsWith("https://", { message: "LinkedIn link must start with https://." })
+        .trim()
         .optional(),
 
     snapchat: z.string()

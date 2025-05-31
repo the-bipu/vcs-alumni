@@ -15,6 +15,7 @@ import UpdatePass from '../components/UpdatePass/UpdatePass';
 import RequestService from '../components/RequestService/RequestService';
 import FeedbackCmp from '../components/FeedbackCmp/FeedbackCmp';
 import WrongSession from '../common/WrongSession';
+import Link from 'next/link';
 
 const AdminView = () => {
   const { setActiveTab, loading, userData, authenticated, isAdmin } = useContext(UserContext);
@@ -74,7 +75,9 @@ const AdminView = () => {
               <div className='flex flex-col w-full flex-1 p-4'>
 
                 <div className='w-full flex flex-row items-center justify-start gap-2 mb-8'>
-                  <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className={minimized ? 'w-16' : 'w-20'} />
+                  <Link href='/'>
+                    <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className={minimized ? 'w-16' : 'w-20'} />
+                  </Link>
                   <div className={`flex flex-col ${minimized ? 'hidden' : 'flex'}`}>
                     <div className='font-semibold text-xl'>VCS ALUMNI</div>
                     <div>Admin</div>

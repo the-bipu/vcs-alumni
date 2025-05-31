@@ -137,7 +137,9 @@ const AccountView = () => {
 
                   <div className='flex flex-col w-full py-3 px-2'>
                     <span className='text-sm'>You're logged in as</span>
-                    <span className='font-bold uppercase text-[#3b3b3b] cursor-pointer'>{userData?.email}</span>
+                    <span className='font-bold uppercase text-[#3b3b3b] cursor-pointer'>
+                      {userData?.email?.split('@')[0]}
+                    </span>
                   </div>
                 </div>
 
