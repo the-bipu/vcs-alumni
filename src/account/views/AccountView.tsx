@@ -16,6 +16,7 @@ import UpdatePass from '../components/UpdatePass/UpdatePass';
 import RequestService from '../components/RequestService/RequestService';
 import FeedbackCmp from '../components/FeedbackCmp/FeedbackCmp';
 import WrongSession from '../common/WrongSession';
+import MiniNav from '@/components/common/MiniNav';
 
 const AccountView = () => {
   const { setActiveTab, loading, userData, authenticated } = useContext(UserContext);
@@ -67,27 +68,7 @@ const AccountView = () => {
       ) : (
         <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start relative bg-[#dddddd] overflow-hidden`}>
 
-          <div className='w-full h-64 bg-blue-600 text-3xl font-semibold text-white flex items-center justify-center relative'>
-            <div className='w-10/12 h-auto flex flex-row items-center justify-between top-10'>
-
-              <div className='md:hidden flex text-base font-light transition-all bg-black hover:bg-black/70 text-white border-2 border-black hover:border-black/70 cursor-pointer rounded px-3 py-1' onClick={() => setNavOpen(!navOpen)}>
-                {navOpen ? (
-                  <Cross1Icon className='h-6' />
-                ) : (
-                  <HamburgerMenuIcon className='h-6' />
-                )}
-              </div>
-
-              <Link href='/' className='text-base font-light transition-all bg-black hover:bg-black/70 text-white border-2 border-black hover:border-black/70 cursor-pointer rounded px-3 py-1'>
-                <span className='md:flex hidden'>Back to Home</span>
-                <span className='md:hidden flex'>
-                  <ExitIcon className='h-6' />
-                </span>
-              </Link>
-
-            </div>
-
-          </div>
+          <MiniNav />
 
           <div className='md:w-10/12 w-11/12 h-auto flex md:flex-row flex-col items-start justify-center gap-6 mb-10'>
 

@@ -5,11 +5,10 @@ import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 const Navbar = () => {
-    const { activeTab, authenticated, userData } = useContext(UserContext);
+    const { activeTab, authenticated, isAdmin } = useContext(UserContext);
 
     const [isActive, setIsActive] = useState(false);
     const toggleNavbar = () => {
@@ -140,6 +139,9 @@ const Navbar = () => {
                             <Link href='/admission' onClick={toggleNavbar}>Admission</Link>
                             <Link href='https://vaishalicentralschool.vercel.app' target='_blank'>Webpage</Link>
                             <Link href='/developers' onClick={toggleNavbar}>Website Team</Link>
+                            {isAdmin && (
+                                <Link href='/admin/dashboard' onClick={toggleNavbar}>Admin Dashboard</Link>
+                            )}
                         </div>
 
                     </div>
