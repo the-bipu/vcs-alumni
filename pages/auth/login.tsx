@@ -1,4 +1,4 @@
-import Loader from '@/components/common/Loader';
+import Loader from '@/components/common/Loader/Loader';
 import Login from '@/components/common/Login'
 import MiniNav from '@/components/common/MiniNav';
 import { UserContext } from '@/context/userContext';

@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const { data: session } = useSession();
   const user = session?.user?.email || null;
@@ -37,6 +38,9 @@ export const UserProvider = ({ children }) => {
           const userData = await res.json();
           setUserData(userData);
           setAuthenticated(true);
+          if (userData.userType === "admin") {
+            setIsAdmin(true);
+          }
         } catch (error) {
           console.error("Error fetching user data:", error);
         } finally {
@@ -58,6 +62,7 @@ export const UserProvider = ({ children }) => {
         currentYear,
         authenticated,
         userData,
+        isAdmin,
       }}
     >
       {children}

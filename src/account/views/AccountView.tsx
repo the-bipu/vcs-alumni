@@ -4,7 +4,7 @@ import EditProfile from '../components/EditProfile/EditProfile';
 import UserProfile from '../components/UserProfile/UserProfile';
 import { useRouter } from 'next/router';
 import { signOut } from 'next-auth/react';
-import Loader from '@/components/common/Loader';
+import Loader from '@/components/common/Loader/Loader';
 import { AvatarIcon, BadgeIcon, ChatBubbleIcon, Cross1Icon, ExitIcon, HamburgerMenuIcon, LockClosedIcon, Pencil2Icon, RocketIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import Image from 'next/image';

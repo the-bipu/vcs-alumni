@@ -4,9 +4,8 @@ import EditProfile from '../components/EditProfile/EditProfile';
 import UserProfile from '../components/UserProfile/UserProfile';
 import { useRouter } from 'next/router';
 import { signOut } from 'next-auth/react';
-import Loader from '@/components/common/Loader';
-import { AvatarIcon, BadgeIcon, Cross1Icon, ExitIcon, HamburgerMenuIcon, LockClosedIcon, Pencil2Icon, RocketIcon } from '@radix-ui/react-icons';
-import Link from 'next/link';
+import Loader from '@/components/common/Loader/Loader';
+import { AvatarIcon, BadgeIcon, ExitIcon, LockClosedIcon, Pencil2Icon, RocketIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import LockedTab from '../common/LockedTab';
@@ -18,7 +17,7 @@ import FeedbackCmp from '../components/FeedbackCmp/FeedbackCmp';
 import WrongSession from '../common/WrongSession';
 
 const AdminView = () => {
-  const { setActiveTab, loading, userData, authenticated } = useContext(UserContext);
+  const { setActiveTab, loading, userData, authenticated, isAdmin } = useContext(UserContext);
   const [isEditing, setIsEditing] = useState(false);
   const [minimized, setMinimized] = useState(false);
 
@@ -63,8 +62,8 @@ const AdminView = () => {
     <React.Fragment>
       {loading ? (
         <Loader />
-      ) : !authenticated ? (
-        <WrongSession />
+      ) : (!authenticated || !isAdmin) ? (
+        <WrongSession countdown={countdown} />
       ) : (
         <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start fixed`}>
 
