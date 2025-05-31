@@ -20,6 +20,7 @@ import WrongSession from '../common/WrongSession';
 const AdminView = () => {
   const { setActiveTab, loading, userData, authenticated } = useContext(UserContext);
   const [isEditing, setIsEditing] = useState(false);
+  const [minimized, setMinimized] = useState(false);
 
   const router = useRouter();
   const [countdown, setCountdown] = useState(5);
@@ -65,49 +66,62 @@ const AdminView = () => {
       ) : !authenticated ? (
         <WrongSession />
       ) : (
-        <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start relative overflow-hidden`}>
+        <div className={`w-full h-auto min-h-screen flex flex-col gap-6 items-center justify-start fixed`}>
 
           <div className='w-full h-auto flex md:flex-row flex-col items-start justify-center'>
 
-            <div className='w-96 md:flex hidden flex-col h-screen border-r border-r-[#acacac]'>
+            <div className={`${minimized ? 'w-24' : 'w-96'} md:flex hidden flex-col h-screen border-r border-r-[#acacac]`}>
 
-              <div onClick={() => setCurrentTab('accountDetail')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'accountDetail' && 'bg-[#2d5fa6] text-white'}`}>
-                <AvatarIcon className='w-6 h-6' />
-                <span>Account Details</span>
+              <div className='flex flex-col w-full flex-1 p-4'>
+
+                <div className='w-full flex flex-row items-center justify-start gap-2 mb-8'>
+                  <Image src='/logo/vcs-logo.svg' alt='logo vaishali central school' width={200} height={80} className={minimized ? 'w-16' : 'w-20'} />
+                  <div className={`flex flex-col ${minimized ? 'hidden' : 'flex'}`}>
+                    <div className='font-semibold text-xl'>VCS ALUMNI</div>
+                    <div>Admin</div>
+                  </div>
+                </div>
+
+                <div className={minimized ? 'hidden' : 'flex mb-1 px-4'}>Overview</div>
+
+                <div onClick={() => setCurrentTab('accountDetail')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'accountDetail' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <AvatarIcon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Account Details</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('editAccount')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'editAccount' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <Pencil2Icon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Edit Details</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('membership')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'membership' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <BadgeIcon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Membership</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('password')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'password' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <LockClosedIcon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Password</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('services')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'services' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <Phone className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Request Service</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('feedback')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'feedback' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <RocketIcon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Feedback</span>
+                </div>
               </div>
 
-              <div onClick={() => setCurrentTab('editAccount')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'editAccount' && 'bg-[#2d5fa6] text-white'}`}>
-                <Pencil2Icon className='w-6 h-6' />
-                <span>Edit Details</span>
-              </div>
-
-              <div onClick={() => setCurrentTab('membership')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'membership' && 'bg-[#2d5fa6] text-white'}`}>
-                <BadgeIcon className='w-6 h-6' />
-                <span>Membership</span>
-              </div>
-
-              <div onClick={() => setCurrentTab('password')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'password' && 'bg-[#2d5fa6] text-white'}`}>
-                <LockClosedIcon className='w-6 h-6' />
-                <span>Password</span>
-              </div>
-
-              <div onClick={() => setCurrentTab('services')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'services' && 'bg-[#2d5fa6] text-white'}`}>
-                <Phone className='w-6 h-6' />
-                <span>Request Service</span>
-              </div>
-
-              <div onClick={() => setCurrentTab('referral')} className={`p-3 flex flex-row gap-2 items-center justify-start cursor-pointer ${currentTab === 'referral' && 'bg-[#2d5fa6] text-white'}`}>
-                <RocketIcon className='w-6 h-6' />
-                <span>Feedback</span>
-              </div>
-
-              <div className='mt-10 flex flex-col gap-4 px-4'>
-                <Button onClick={logOutSession} className='px-4 flex flex-row text-base gap-2 items-center justify-start cursor-pointer'>
-                  <ExitIcon className='min-w-6 min-h-6' />
-                  <span>Signout</span>
+              <div className='mt-10 flex flex-col gap-4 px-4 pb-4'>
+                <Button onClick={logOutSession} className={`px-4 flex flex-row text-base gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer`}>
+                  <ExitIcon className='min-w-5 min-h-5' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Signout</span>
                 </Button>
 
-                <div className='flex flex-col w-full py-3 px-2'>
+                <div className={minimized ? 'hidden' : 'flex flex-col w-full py-3 px-2'}>
                   <span className='text-sm'>You're logged in as</span>
                   <span className='font-bold uppercase text-[#3b3b3b] cursor-pointer'>{userData?.email}</span>
                 </div>
@@ -164,45 +178,48 @@ const AdminView = () => {
               </div>
             </div>
 
-            {currentTab === 'editAccount' && (
-              <EditProfile isEditing={isEditing} setIsEditing={setIsEditing} />
-            )}
+            <div className='w-full h-screen flex flex-col items-start justify-start bg-white p-4 overflow-y-auto hiddenScroll'>
 
-            {currentTab === 'accountDetail' && (
-              <UserProfile isEditing={isEditing} setIsEditing={setIsEditing} userData={userData} formattedDate={formattedDate} />
-            )}
+              {currentTab === 'editAccount' && (
+                <EditProfile isEditing={isEditing} setIsEditing={setIsEditing} minimized={minimized} setMinimized={setMinimized} />
+              )}
 
-            {currentTab === 'membership' && (
-              userData.verified ? (
-                <MembershipCmp />
-              ) : (
-                <LockedTab />
-              )
-            )}
+              {currentTab === 'accountDetail' && (
+                <UserProfile isEditing={isEditing} setIsEditing={setIsEditing} userData={userData} formattedDate={formattedDate} />
+              )}
 
-            {currentTab === 'password' && (
-              userData.verified ? (
-                <UpdatePass />
-              ) : (
-                <LockedTab />
-              )
-            )}
+              {currentTab === 'membership' && (
+                userData.verified ? (
+                  <MembershipCmp />
+                ) : (
+                  <LockedTab />
+                )
+              )}
 
-            {currentTab === 'services' && (
-              userData.verified ? (
-                <RequestService />
-              ) : (
-                <LockedTab />
-              )
-            )}
+              {currentTab === 'password' && (
+                userData.verified ? (
+                  <UpdatePass />
+                ) : (
+                  <LockedTab />
+                )
+              )}
 
-            {currentTab === 'referral' && (
-              userData.verified ? (
-                <FeedbackCmp />
-              ) : (
-                <LockedTab />
-              )
-            )}
+              {currentTab === 'services' && (
+                userData.verified ? (
+                  <RequestService />
+                ) : (
+                  <LockedTab />
+                )
+              )}
+
+              {currentTab === 'feedback' && (
+                userData.verified ? (
+                  <FeedbackCmp />
+                ) : (
+                  <LockedTab />
+                )
+              )}
+            </div>
 
           </div>
         </div>
