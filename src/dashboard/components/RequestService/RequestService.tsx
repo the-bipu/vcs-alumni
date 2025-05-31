@@ -2,7 +2,7 @@ import React from 'react'
 
 const RequestService = () => {
     return (
-        <div className='w-full h-auto flex flex-col items-start justify-start bg-white p-4'>
+        <div className='w-full h-auto flex flex-col items-start justify-start'>
             <div className='flex flex-col w-full gap-4'>
 
                 <div className='flex w-full flex-row items-center justify-between border-b border-b-[#acacac] pb-3'>

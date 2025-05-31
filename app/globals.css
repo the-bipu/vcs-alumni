@@ -94,6 +94,14 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: #151515;
   }
+
+  .hiddenScroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hiddenScroll::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Loader styles */
@@ -312,21 +320,6 @@ body {
 .h-115 { height: 550px; }
 .h-125 { height: 650px; }
 
-.serviceCard {
-  position: relative;
-  margin-top: 0;
-  color: #fff;
-  background: #171717;
-  border: 1px solid #2b2b2b;
-  border-radius: 8px;
-  transition: all ease-in 0.2s;
-}
-
-.serviceCard:hover {
-  border: 1px solid black;
-  transform: scale(1.01);
-}
-
-.serviceCard:active {
-  transform: scale(0.95) rotateZ(1.7deg);
+.shadowBorder {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }

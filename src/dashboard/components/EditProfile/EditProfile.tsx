@@ -20,8 +20,9 @@ import { Separator } from '@/components/ui/separator';
 import { CldImage, CldUploadWidget } from 'next-cloudinary';
 import { FaUpload } from 'react-icons/fa';
 import { formSchema } from '../../schema/formSchema';
+import { EnterFullScreenIcon, ExitFullScreenIcon } from '@radix-ui/react-icons';
 
-const EditProfile = ({ setIsEditing, isEditing }: any) => {
+const EditProfile = ({ setIsEditing, isEditing, minimized, setMinimized }: any) => {
     const router = useRouter();
     const [publicId, setPublicId] = useState("");
 
@@ -89,11 +90,14 @@ const EditProfile = ({ setIsEditing, isEditing }: any) => {
     }
 
     return (
-        <div className='w-full h-auto flex flex-col items-start justify-start bg-white p-4'>
+        <div className='w-full h-auto flex flex-col items-start justify-start'>
             <div className='flex flex-col w-full gap-4'>
 
                 <div className='flex w-full flex-row items-center justify-between border-b border-b-[#acacac] pb-3'>
                     <h2 className='md:text-lg text-base font-semibold text-[#353535] px-3'>Edit Profile</h2>
+                    <Button onClick={() => setMinimized(!minimized)} className='p-2'>
+                        {minimized ? <ExitFullScreenIcon className='w-6 h-6' /> : <EnterFullScreenIcon className='w-6 h-6' />}
+                    </Button>
                 </div>
 
                 <div className='min-w-64 flex flex-col gap-4 mb-4'>
