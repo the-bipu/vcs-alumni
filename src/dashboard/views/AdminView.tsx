@@ -16,6 +16,7 @@ import RequestService from '../components/RequestService/RequestService';
 import FeedbackCmp from '../components/FeedbackCmp/FeedbackCmp';
 import WrongSession from '../common/WrongSession';
 import Link from 'next/link';
+import VerificationCmp from '../components/VerificationCmp/VerificationCmp';
 
 const AdminView = () => {
   const { setActiveTab, loading, userData, authenticated, isAdmin } = useContext(UserContext);
@@ -99,6 +100,11 @@ const AdminView = () => {
                 <div onClick={() => setCurrentTab('membership')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'membership' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
                   <BadgeIcon className='w-6 h-6' />
                   <span className={minimized ? 'hidden' : 'flex'}>Membership</span>
+                </div>
+
+                <div onClick={() => setCurrentTab('verification')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'verification' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
+                  <BadgeIcon className='w-6 h-6' />
+                  <span className={minimized ? 'hidden' : 'flex'}>Verification</span>
                 </div>
 
                 <div onClick={() => setCurrentTab('password')} className={`p-3 flex flex-row gap-2 items-center ${minimized ? 'justify-center' : 'justify-start'} cursor-pointer rounded ${currentTab === 'password' && 'bg-[#2d5fa6] text-white shadowBorder'}`}>
@@ -193,6 +199,14 @@ const AdminView = () => {
               {currentTab === 'membership' && (
                 userData.verified ? (
                   <MembershipCmp />
+                ) : (
+                  <LockedTab />
+                )
+              )}
+
+              {currentTab === 'verification' && (
+                userData.verified ? (
+                  <VerificationCmp />
                 ) : (
                   <LockedTab />
                 )
